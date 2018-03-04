@@ -1,0 +1,29 @@
+Multiscale Normalized Cut (Multi-Ncut) image segmentation benchmark is derived from the source code provided by Jianbo Shi at http://www.cis.upenn.edu/~jshi/software, version 8 (retrieved on 04-May-2006).
+
+The webpage of the benchmark contains the following text:
+
+<p><strong>
+This software is made publicly for research use only. It may be
+modified and redistributed under the terms of the </strong><a
+ href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>.<br>
+<br>
+</p>
+
+Thus, Multi-Ncut is licensed under the GNU General Public License (GPL), Version 3.0.
+We have included a copy of the GNU GPL 3.0 in this directory, in the file gpl-3.0.html.
+
+We have modified Multi-Ncut in the following ways:
+
+- Algorithm used for C source code: 
+    Pedro F. Felzenszwalb and Daniel P. Huttenlocher
+    International Journal of Computer Vision, Volume 59, Number 2, September 2004
+- The source code has been derived from http://people.cs.uchicago.edu/~pff/segment/. This software is 
+    protected under GNU GPL License, Version 2, June 1991 http://www.gnu.org/licenses/gpl-2.0.txt
+- we modified the code to use our own standardized library for common functions (matlab and C)
+- we augmented the code in order to support collection of benchmarking data (matlab and C)
+- we create benchmark inputs for the code (matlab and C)
+
+Since GPL is viral, our modifications to this benchmark are also open source, under the
+GPL 3.0 license.
+
+

@@ -1,0 +1,34 @@
+MSER is a subcomponent drawn from the VLFeat open source package (http://VLFeat.org), version 0.9.4.1.
+The version of MSER is .5.
+
+The VLFeat.org webpage contains the following text:
+
+http://vlfeat.org/index.html (retrieved September 7, 2009):
+
+<p>The <b>VLFeat</b> <a shape="rect" href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">
+  open source</a> library implements popular computer vision algorithms  including
+  <em>SIFT</em>, <em>MSER</em>, <em>k-means</em>, <em>hierarchical
+  k-means</em>, <em>agglomerative information bottleneck, and quick shift</em>.
+  It is written in C for efficiency and compatibility, with interfaces in
+  MATLAB for ease of use, and detailed documentation throughout. It supports
+  <em>Windows</em>, <em>Mac OS X</em>, and <em>Linux</em>. The latest version of
+  VLFeat is <code>0.9.4.1</code>.</p>
+
+Thus, MSER is licensed under the GNU General Public License (GPL), version 2.0.
+
+We have included a copy of the GNU GPL 2.0 in this directory, in the file gpl-2.0.html.
+
+We have modified MSER in the following ways:
+
+- we generated a standalone C version from the mser.mex.c source.
+- we augmented the code in order to support collection of benchmarking data (matlab and C)
+- we create benchmark inputs for the code (matlab and C)
+- we modified the code to use our own standardized library for common functions (matlab and C)
+
+Since GPL is viral, our modifications to this benchmark are also open source, under the
+GPL 2.0 license.
+
+
+ 
+
+ 

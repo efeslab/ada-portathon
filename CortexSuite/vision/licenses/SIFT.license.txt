@@ -1,0 +1,64 @@
+The SIFT (Scale Invariant Feature Transform) benchmark is derived from the code provided by Andrea Vedaldi at http://www.vlfeat.org/~vedaldi/code/sift.html, retrieved June 18, 2007. A later version of the component has been incorporated into the VLFeat open source package (http://VLFeat.org), 0.9.4.1.
+
+The header files of the code contain the following license:  
+
+/* AUTORIGHTS
+Copyright (C) 2006 Regents of the University of California
+All rights reserved
+
+Written by Andrea Vedaldi (UCLA VisionLab).
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the University of California, Berkeley nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE REGENTS AND CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+In addition to the copyright terms mentioned above, the VLFeat.org webpage contains the following text:
+
+  <p>This software program is Copyright &copy; 2006 The Regents of the
+  University of California and can be freely used for academic purposes
+  (see the included license file for details).  Although this
+  implementation is original (in particular, it is <em>not</em> derived
+  from <a shape="rect" href="http://www.cs.ubc.ca/~lowe/keypoints/">Lowe's
+   implementation</a>), the SIFT algorithm has been issued a
+  patent. Thus you should note that:</p>
+
+ <blockquote style="font-style:italic;">
+  This software embodies a method for which the following patent has
+  been issued: &quot;Method and apparatus for identifying scale invariant
+  features in an image and use of same for locating an object in an
+  image,&quot; David G. Lowe, US Patent 6,711,293 (March 23,
+  2004). Provisional application filed March 8, 1999. Asignee: The
+  University of British Columbia.
+ </blockquote>
+
+We have modified SIFT in the following ways:
+
+- we generated a standalone C version from the Matlab source files of SIFT.
+- we augmented the code in order to support collection of benchmarking data (matlab and C)
+- we create benchmark inputs for the code (matlab and C)
+- we modified the code to use our own standardized library for common functions (matlab and C)
+
+Our modifications are available under the same license as above, since UCSD is also
+part of the University of California.
+
+

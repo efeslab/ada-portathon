@@ -1,0 +1,19 @@
+Usage:
+
+make all (Runs small medim large benchmarks with cycle time)
+
+Individual dataset sizes can be run by using the commands:
+
+make small
+make medium
+make large
+
+Output:
+Motion Vectors
+
+
+Motion Estimation:
+
+Motion Estimation is a process of determining motion vectors that describe the transformation of one 2D image to another. It is an inverse, ill-posed problem as the motion is in 3D but the images are the projection of the 3D scene onto a 2D plane.  Motion Estimation is the essential element in image and video processing. Motion Estimation is a key part of the video coding and applications such as frame rate up conversion, image super resolution etc. Performance of motion estimation can directly affect the performance of these applications. 
+We implement the fast sub-pixel motion estimation algorithm proposed by Stanley H. Chan et. al. This is a hybrid algorithm which combines two popular techniques of motion estimation namely block matching and optical flow.  As the name suggests, the block matching algorithm finds the best matched block in the search space. While block matching algorithm is the most accurate and easiest to parallelize, it is a bad candidate for the sub-pixel motion estimation. To find out sub-pixel motion, the block matching algorithm has to interpolate the image by a certain factor depending on the desired accuracy. For example if we want to achieve 0.25 pixel accuracy, then we need to enlarge the image by 8 times along each direction. Although state-of-art algorithms can selectively choose where to interpolate, their cost is still high. Hence our implementation uses block matching algorithm for full-pixel part of motion estimation and the sub-pixel part is computed using the optical flow. Optical flow is the pattern of apparent motion of objects as perceived by the variation in the light intensity caused by the relative motion between an observer, scene and the light source. Optical flow is based on the assumption of the brightness constancy constrain and holds true only for the small motions and hence is an excellent candidate for the sub-pixel motion.  
+

@@ -1,0 +1,18 @@
+   PCA algorithm gathered from StatLib hosted by the Department of
+   Statistics at Carnegie Mellon University http://lib.stat.cmu.edu/
+
+   Principal Components Analysis or the Karhunen-Loeve expansion is a
+   classical method for dimensionality reduction or exploratory data
+   analysis.  One reference among many is: F. Murtagh and A. Heck,
+   Multivariate Data Analysis, Kluwer Academic, Dordrecht, 1987.
+
+   Author:
+   F. Murtagh
+   Phone:        + 49 89 32006298 (work)
+                 + 49 89 965307 (home)
+   Earn/Bitnet:  fionn@dgaeso51,  fim@dgaipp1s,  murtagh@stsci
+   Span:         esomc1::fionn
+   Internet:     murtagh@scivax.stsci.edu
+   
+   F. Murtagh, Munich, 6 June 1989                                    
+

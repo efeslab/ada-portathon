@@ -1,0 +1,58 @@
+The Texture Synthesis benchmark is derived from the source code provided by Eero Simoncelli amd Javeir Portilla at http://www.cns.nyu.edu/~lcv/texture/. 
+
+The header files of the Texture Synthesis benchmark contain the following license:
+
+ Javier Portilla and Eero Simoncelli.
+ Work described in:
+  "A Parametric Texture Model based on Joint Statistics of Complex Wavelet Coefficients".
+  J Portilla and E P Simoncelli. Int'l Journal of Computer Vision,
+  vol.40(1), pp. 49-71, Dec 2000.   
+
+ Please refer to this publication if you use the program for research or
+ for technical applications. Thank you.
+
+ Copyright, Center for Neural Science, New York University, January 2001.
+ All rights reserved.
+
+The Matlab source code for the benchmark and the test data are permitted under the FreeBSD License.
+
+Copyright (C) 2008 Javier Portilla and Eero Simoncelli
+All rights reserved
+
+Written by Javier Portilla and Eero Simoncelli.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the names Javier Portilla and Eero Simoncell nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY JAVIER PORTILLA AND EERO SIMONCELLI ``AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL JAVIER PORTILLA AND EERO SIMONCELL BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+We have modified Texture Synthesis in the following ways:
+
+- we generated a standalone C version from the Matlab source.
+- we augmented the code in order to support collection of benchmarking data (matlab and C)
+- we create benchmark inputs for the code (matlab and C)
+- we modified the code to use our own standardized library for common functions (matlab and C)
+- Note: The algorithm for texture synthesis has been modified according to 
+    "Ashikhmin, M. "Synthesizing Natural Textures" The proceedings of 2001 ACM Symposium on Interactive 3D Graphics, Research Triangle Park, NorthCarolina March 19-21, pp. 217-226".
+
+Our modifications are available under the GNU General Public License (GPL), version 3.0. We have included a copy of the GNU GPL 3.0 in this directory, in the file gpl-3.0.html. 
+
+

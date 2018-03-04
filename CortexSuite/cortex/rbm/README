@@ -1,0 +1,33 @@
+Usage:
+
+make all (Runs small medim large benchmarks with cycle time)
+
+Individual dataset sizes can be run by using the commands:
+
+make small
+make medium
+make large
+
+
+
+
+
+RBM is a stochastic neural network that has many different applications, such
+as dimensionality reduction, classification, collaborative filtering, feature
+learning and topic modeling. The neural network has visible units and hidden
+units, where each of the hidden units is connected with each of the visible
+units. The usage of this network depends on the application.SD-VBS utilizes
+RBM to implement movie suggestion (collaborative filtering) on a reduced
+Netflix database. SD-VBS provides the benchmark for the training process of
+RBM, not the recommendation process. We are interested in the training process
+because it is very computationally intensive. It can take hours or days to
+complete depending on the size of the database. For this reason, we reduced the
+size of Netflix database (without loss of generality) to make the running time
+of the benchmark feasible. To train RBM, we need a data comprising of users and
+their movie ratings. We initialize the RBM with “random” parameters. Then, we
+repeat the training iteration until convergence. In every iteration, we let the
+current RBM try to reconstruct the input data, and then we adjust its
+parameters based on the error of the data reconstruction. With more iterations,
+the reconstruction error diminishes, and we stop the training when the error
+converges (or until some predetermined number of iterations is reached). These
+iterations are very computationally intensive.

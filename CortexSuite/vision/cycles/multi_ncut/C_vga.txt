@@ -1,0 +1,6 @@
+Input size		- (480x640)
+Checking error: Values mismtach at 2910 element
+Expected value = 0, observed = 1
+Error in Multi N Cut
+Cycles elapsed		- 842167362717
+

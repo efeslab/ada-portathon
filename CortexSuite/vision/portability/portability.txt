@@ -1,0 +1,25 @@
+The SD-VBS suite is designed to be portable across different platforms. If you would like 
+port it, you need to set appropriate platform specific commands.
+
+By default, SD-VBS is set to the x86-64 bit architecture for the Linux operating system. The platform
+specific commands for this configuration can be found in SD-VBS/Portability/386-gcc.h. This configuration
+file is included in SD-VBS/Makefile.common.
+
+To change the platform specific commands:
+1. Modify/Add <Architecture>-gcc.h file appropriately
+2. Include <Architecture>-gcc.h file in SD-VBS/Makefile.common
+
+We have included a few sample configuration files in SD-VBS/Portability directory.
+These correspond to:
+
+1. x386 architecture, 32-64 bit
+3. SPARC architecture, 32-64 bit
+
+Note:
+
+SD-VBS has been tested on x86 32-bit and 64-bit architectures. If the user encounters undesired behavior
+while running the SD-VBS on other platforms, please report the bugs to:
+
+Sravanthi Kota Venkata: <skotavenkata@cs.ucsd.edu>
+
+

@@ -1,0 +1,211 @@
+disparity            C	simfast                          0-   1461980
+
+disparity            C	test                             0-     31517
+
+disparity            C	sqcif                            0- 105014529
+
+disparity            C	sim                              0-   3637863
+
+disparity            C	qcif                             0- 211037303
+
+localization         C	simfast                          0-   6320385
+
+localization         C	cif                              1-1183862661
+
+localization         C	test                             0-    144570
+
+localization         C	sqcif                            0-1388207971
+
+localization         C	sim                              0-  12655122
+
+localization         C	qcif                             1-3648202163
+
+mser                 C	simfast                          0-   7016310
+
+mser                 C	cif                              0- 191979168
+
+mser                 C	test                             0-   6990950
+
+mser                 C	sqcif                            0-   7172238
+
+mser                 C	sim                              0-   6824478
+
+mser                 C	qcif                             0-  28070842
+
+multi_ncut           C	simfast                          0-   1577252
+
+multi_ncut           C	cif                              0- 385140747
+
+multi_ncut           C	test                             0-    811585
+
+multi_ncut           C	sqcif                            0-   6239669
+
+multi_ncut           C	sim                              0-   7481922
+
+multi_ncut           C	qcif                             1-  28659355
+
+sift                 C	simfast                          0-   1761498
+
+sift                 C	cif                              0- 760884921
+
+sift                 C	test                             0-    308173
+
+sift                 C	sqcif                            0-  77751609
+
+sift                 C	sim                              0-   7976802
+
+sift                 C	qcif                             1-4288045394
+
+stitch               C	simfast                          0-  43915998
+
+stitch               C	cif                            160-4178405998
+
+stitch               C	test                             0-    513073
+
+stitch               C	sqcif                            4- 804515343
+
+stitch               C	sim                              0- 193222049
+
+stitch               C	qcif                            16-1403182613
+
+svm                  C	simfast                          0-   1413751
+
+svm                  C	cif                             65- 266935159
+
+svm                  C	test                             0-    122570
+
+svm                  C	sqcif                           19-2605283439
+
+svm                  C	sim                              0-  11483650
+
+svm                  C	qcif                            11-2584431577
+
+ERROR: INVALID INPUT FILE:Cycles/texture/C_sim_fast.txt
+texture              C	cif                              0-      1328
+
+ERROR: INVALID INPUT FILE:Cycles/texture/C_test.txt
+texture              C	sqcif                            0-      1295
+
+ERROR: INVALID INPUT FILE:Cycles/texture/C_sim.txt
+texture              C	qcif                             0-      1297
+
+tracking             C	simfast                          0-   2365342
+
+tracking             C	cif                             26-2269667146
+
+tracking             C	test                             0-    272243
+
+tracking             C	sqcif                            0-1676696163
+
+tracking             C	sim                              1-  31857489
+
+tracking             C	qcif                             2-2916866163
+
+disparity            Matlab	simfast                     1- 390721855
+
+disparity            Matlab	sqcif                       0-      3730
+
+disparity            Matlab	test                        1-         0
+
+disparity            Matlab	cif                         0-      7313
+
+disparity            Matlab	sim                         1- 196112622
+
+disparity            Matlab	qcif                        2-         0
+
+localization         Matlab	simfast                     0- 472820168
+
+localization         Matlab	sqcif                       0-      0638
+
+localization         Matlab	test                        0- 489863036
+
+localization         Matlab	cif                         0-      2874
+
+localization         Matlab	sim                         1- 906405584
+
+localization         Matlab	qcif                        0-      6515
+
+mser                 Matlab	simfast                     0-  18314231
+
+mser                 Matlab	sqcif                       0-  17666137
+
+mser                 Matlab	test                        0-  18447897
+
+mser                 Matlab	cif                         0- 194931360
+
+mser                 Matlab	sim                         0-  28190448
+
+mser                 Matlab	qcif                        0-  48073753
+
+multi_ncut           Matlab	simfast                     2- 154322361
+
+multi_ncut           Matlab	sqcif                       3- 323703483
+
+multi_ncut           Matlab	test                        0-      4872
+
+multi_ncut           Matlab	cif                        47- 505613608
+
+multi_ncut           Matlab	sim                         4-         0
+
+multi_ncut           Matlab	qcif                        0-      6489
+
+sift                 Matlab	simfast                     0- 195042305
+
+sift                 Matlab	sqcif                       0- 366825137
+
+sift                 Matlab	test                        0- 163427047
+
+sift                 Matlab	cif                         1-         0
+
+sift                 Matlab	sim                         0- 235977716
+
+sift                 Matlab	qcif                        0- 581801896
+
+stitch               Matlab	simfast                     1- 287414677
+
+stitch               Matlab	sqcif                       1- 821524592
+
+stitch               Matlab	test                        1- 525895091
+
+stitch               Matlab	cif                         0-      7788
+
+stitch               Matlab	sim                         1- 274111244
+
+stitch               Matlab	qcif                        2-         0
+
+svm                  Matlab	simfast                     0-      2235
+
+svm                  Matlab	sqcif                       1- 651608832
+
+svm                  Matlab	test                        0- 825649097
+
+svm                  Matlab	cif                         0-      2799
+
+svm                  Matlab	sim                         0- 938335450
+
+svm                  Matlab	qcif                        2-         0
+
+texture              Matlab	simfast                     3- 746828896
+
+texture              Matlab	sqcif                      10-         0
+
+texture              Matlab	test                        0-      4899
+
+texture              Matlab	cif                        30-         0
+
+texture              Matlab	sim                         4- 943106318
+
+texture              Matlab	qcif                       35-         0
+
+tracking             Matlab	simfast                     0- 571512734
+
+tracking             Matlab	sqcif                       3- 444890713
+
+tracking             Matlab	test                        1- 353671591
+
+tracking             Matlab	cif                        19- 712997403
+
+tracking             Matlab	sim                         0-      3671
+
+tracking             Matlab	qcif                        6-         0
+

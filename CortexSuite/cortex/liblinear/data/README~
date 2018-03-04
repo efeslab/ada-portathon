@@ -1,0 +1,5 @@
+The names of the folders refer to the numbers of cycles needed to run 5-folder cross validation classification of each data set. To simply train them will be 2~4 times faster.
+
+In 10M folder, try using parameter "-s 2" to increase accuracy and speed.
+
+100M data set is a regression problem and the rest four are classification problems.

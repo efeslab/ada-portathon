@@ -1,0 +1,22 @@
+Executing Matlab version of the benchmark sift
+sift
+Warning: Unable to open display , MATLAB is starting without a display.
+  You will not be able to display graphics on the screen.
+Warning: No window system found.  Java option 'MWT' ignored
+
+                                                                                < M A T L A B >
+                                                                    Copyright 1984-2006 The MathWorks, Inc.
+                                                                          Version 7.3.0.298 (R2006b)
+                                                                                August 03, 2006
+
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+Warning: Function /h/g2/kvs/Desktop/VBS_Ver1.1/common/randn.m has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path at 113
+  In script_run_profile at 3
+ We need pathName and fileName as inputs here
+DONE WITH MATLAB PRINT
+Computing frames and descriptors.
+>> quit

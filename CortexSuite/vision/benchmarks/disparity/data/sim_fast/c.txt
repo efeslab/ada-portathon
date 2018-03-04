@@ -1,0 +1,19 @@
+gcc -DGCC -DTIMING -Dsim_fast -lm -O2 -I../../../C_common -I../../C ../../../C_common/calcSobel_dX.c ../../../C_common/calcSobel_dY.c ../../../C_common/fDeepCopy.c ../../../C_common/fDeepCopyRange.c ../../../C_common/fDivide.c ../../../C_common/ffConv2.c ../../../C_common/ffConv2_dY.c ../../../C_common/ffDivide.c ../../../C_common/ffiConv2.c ../../../C_common/fFind3.c ../../../C_common/ffTimes.c ../../../C_common/ffVertcat.c ../../../C_common/fHorzcat.c ../../../C_common/fiConv2.c ../../../C_common/fiDeepCopy.c ../../../C_common/fMallocHandle.c ../../../C_common/fMdivide.c ../../../C_common/fMinus.c ../../../C_common/fMtimes.c ../../../C_common/fPlus.c ../../../C_common/fReshape.c ../../../C_common/fSelfCheck.c ../../../C_common/fSetArray.c ../../../C_common/fSort.c ../../../C_common/fSortIndices.c ../../../C_common/fSum2.c ../../../C_common/fSum.c ../../../C_common/fTimes.c ../../../C_common/fTranspose.c ../../../C_common/horzcat.c ../../../C_common/iDeepCopy.c ../../../C_common/iDeepCopyRange.c ../../../C_common/iHorzcat.c ../../../C_common/iiConv2.c ../../../C_common/imageBlur.c ../../../C_common/imageResize.c ../../../C_common/iMallocHandle.c ../../../C_common/iMinus.c ../../../C_common/iReshape.c ../../../C_common/iSetArray.c ../../../C_common/isMinus.c ../../../C_common/iSort.c ../../../C_common/iSortIndices.c ../../../C_common/isPlus.c ../../../C_common/iTimes.c ../../../C_common/iTranspose.c ../../../C_common/makeImage.c ../../../C_common/photonEndTiming.c ../../../C_common/photonPrintTiming.c ../../../C_common/photonReportTiming.c ../../../C_common/photonStartTiming.c ../../../C_common/readFile.c ../../../C_common/readImage.c ../../../C_common/selfCheck.c ../../C/computeSAD.c ../../C/correlateSAD_2D.c ../../C/finalSAD.c ../../C/findDisparity.c ../../C/getDisparity.c ../../C/integralImage2D2D.c ../../C/padarray2.c ../../C/padarray4.c ../../C/script_disparity.c -o disparity
+Running C Version of the benchmark
+./disparity ../../data/sim_fast ../result
+Image paths are ../../data/sim_fast/1.bmp	../../data/sim_fast/2.bmp
+bits per pixel 24
+bits per pixel 24
+48	64
+4	4
+right - 52	68
+left - 52	68
+right - 52	68
+left - 52	68
+right - 52	68
+left - 52	68
+success
+right - 52	68
+left - 52	68
+48	64
+Cycles elapsed = 4933959	0

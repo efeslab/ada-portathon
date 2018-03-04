@@ -1,0 +1,28 @@
+Usage:
+
+make all (Runs small medim large benchmarks with cycle time)
+
+Individual dataset sizes can be run by using the commands:
+
+make small
+make medium
+make large
+
+The image datasets can be found in the LR directory and are manually loaded into the main program.
+
+TODO: Explain how to change image datasets
+
+
+
+
+Superresolution Reconstruction:
+
+Super-resolution Reconstruction (SR) is based on the idea that slight variations in the information encoded in a series of low resolution (LR) images can be used to recover a high resolution (HR) image.  Computational resolution enhancement has many applications in the fields of military, healthcare, security, astronomy etc. In nature the manifestation of super-resolution can be seen in the compound eye structures of the insects and files.
+ 
+The basic superresolution problem can be posed as an inverse problem 
+(Add equation from paper here)
+where f is the vectorized true high resolution image, gi is a vectorized lower resolution image, D is the decimation matrix, Hi is a blurring matrix, Si is a shift matrix and i is the upsampling factor. In the models that follow, the decimation matrix D is a local averaging matrix that aggregates values of non-intersecting small neighborhoods of HR pixels to produce LR pixel values. The shift matrix Si; assigns weights according to a bilinear interpolation of HR pixel values to perform a rigid translation of the original image. The blurring matrix Hi is generated from a point spread function (PSF) and represents distortion from atmospheric and other sources. 
+
+The l2 matrices DHiSi are stacked to create one large least squares problem
+ (Add equation from paper here)
+As can be seen from the above equation super-resolution is generally regarded as a memory and compute intensive process due to the large matrix-vector calculations involved.  The dimensionality of the above least squares problem is (n2 x n2) where (n x n) is the size of the desired high resolution image. However because of the high locality of reference, this problem can be easily solved in parallel. It can be seen that while solving for a given low resolution pixel  (which is super-resolved into (l x l) high resolution pixels), only the neighboring pixels participate into computation. Hence we can solve all the odd pixels at a time and then solve for all the even pixels and repeat the process. We implement the parallel algorithm for super resolution suggested by Qiang Zhang et. al. 

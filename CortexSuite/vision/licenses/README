@@ -1,0 +1,11 @@
+BENCHMARK               LICENSE                                     ACADEMIC/RESEARCH USE       COMMERCIAL USE
+
+Disparity Map           FreeBSD                                     Yes                         Yes
+Robot Localization      FreeBSD                                     Yes                         Yes
+Multi-N-Cut             GNU GPL,3.0                                 Yes                         Yes
+MSER                    FreeBSD                                     Yes                         Yes
+Image Stitch            FreeBSD                                     Yes                         Yes
+SVM                     FreeBSD                                     Yes                         Yes
+Texture Synthesis       FreeBSD                                     Yes                         Yes
+Feature Tracking        FreeBSD                                     Yes                         Yes
+SIFT                    Regents of the University of California     Yes                         No

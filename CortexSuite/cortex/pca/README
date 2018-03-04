@@ -1,0 +1,17 @@
+Instructions:
+
+Step 1: Compile
+
+> make compile
+
+Step 2: Running
+
+> make run-small
+> make run-medium
+> make run-large
+
+Dataset Sources:
+
+PCA Small: http://archive.ics.uci.edu/ml/datasets/Semeion+Handwritten+Digit
+PCA Medium: http://archive.ics.uci.edu/ml/datasets/Statlog+(Landsat+Satellite)
+PCA Large: http://archive.ics.uci.edu/ml/datasets/Gisette

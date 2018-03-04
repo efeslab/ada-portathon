@@ -1,0 +1,5 @@
+Top level program is "compute_AD.m".  Use "compute_AD_disp.m" if one
+wants to display results as program runs.
+
+The testing programs are called "simulation.m" for synthetic images,
+and "test_affine.m" for real images.

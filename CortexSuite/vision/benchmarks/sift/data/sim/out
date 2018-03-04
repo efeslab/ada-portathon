@@ -1,0 +1,64 @@
+Executing Matlab version of the benchmark sift
+sift
+
+                                                                                              < M A T L A B >
+                                                                                  Copyright 1984-2006 The MathWorks, Inc.
+                                                                                        Version 7.3.0.298 (R2006b)
+                                                                                              August 03, 2006
+
+ 
+  To get started, type one of these: helpwin, helpdesk, or demo.
+  For product information, visit www.mathworks.com.
+ 
+Warning: Function /h/g2/kvs/Desktop/VBS_Ver1.1/common/randn.m has the same name as a MATLAB builtin. We suggest you rename the function to avoid a potential name conflict.
+> In path at 113
+  In script_run_profile at 3
+Warning: You are using gcc version "4.1.1".  The earliest gcc version supported
+with mex is "3.4.0".  The latest version tested for use with mex is "3.4.5".
+To download a different version of gcc, visit http://gcc.gnu.org 
+Warning: You are using gcc version "4.1.1".  The earliest gcc version supported
+with mex is "3.4.0".  The latest version tested for use with mex is "3.4.5".
+To download a different version of gcc, visit http://gcc.gnu.org 
+Warning: You are using gcc version "4.1.1".  The earliest gcc version supported
+with mex is "3.4.0".  The latest version tested for use with mex is "3.4.5".
+To download a different version of gcc, visit http://gcc.gnu.org 
+Warning: You are using gcc version "4.1.1".  The earliest gcc version supported
+with mex is "3.4.0".  The latest version tested for use with mex is "3.4.5".
+To download a different version of gcc, visit http://gcc.gnu.org 
+Warning: You are using gcc version "4.1.1".  The earliest gcc version supported
+with mex is "3.4.0".  The latest version tested for use with mex is "3.4.5".
+To download a different version of gcc, visit http://gcc.gnu.org 
+Warning: You are using gcc version "4.1.1".  The earliest gcc version supported
+with mex is "3.4.0".  The latest version tested for use with mex is "3.4.5".
+To download a different version of gcc, visit http://gcc.gnu.org 
+ We need pathName and fileName as inputs here
+     6
+
+2.015874	1.259921	-1.000000	0.500000	-1.000000	1.249000
+Dsigma for octave  1.259921	0.000000	1.226273	1.226273
+Dsigma for octave  1.259921	1.000000	1.226273	1.545008
+Dsigma for octave  1.259921	2.000000	1.226273	1.946588
+Dsigma for octave  1.259921	3.000000	1.226273	2.452547
+Dsigma for octave  1.259921	4.000000	1.226273	3.090016
+Const Dimensions = 64
+Const Dimensions = 64
+Const Dimensions = 5
+Const Dimensions = 64
+Const Dimensions = 64
+Const Dimensions = 5
+Params here
+    64    64     5
+
+Size of oframes_ = 3	18
+../data/sim/expected.m
+Const Dimensions = 32
+Const Dimensions = 32
+Const Dimensions = 5
+Const Dimensions = 32
+Const Dimensions = 32
+Const Dimensions = 5
+Params here
+    32    32     5
+
+Size of oframes_ = 3	4
+../data/sim/expected.m

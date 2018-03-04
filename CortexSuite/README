@@ -1,0 +1,23 @@
+UC San Diego
+CortexSuite
+
+
+Compile the benchmarks with the command:
+
+_make compile_
+
+This will compile the benchmarks for the small,medium,and large benchmarks
+where applicable. 
+
+To run a specific set of benchmarks use the commands
+
+_make run-small_
+_make run-medium_
+_make run-large_
+
+To gather the cycle counts for all of these algorithms run
+
+_make cycles_
+
+This will print the cycle count for small, medium, and large datasets if applicable
+for each algorithm

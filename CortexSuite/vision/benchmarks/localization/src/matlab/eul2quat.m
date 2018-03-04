@@ -1,0 +1,9 @@
+function retQuat=eul2quat(eulAngle)
+x=eulAngle(:,1);
+y=eulAngle(:,2);
+z=eulAngle(:,3);
+retQuat=[cos(x/2).*cos(y/2).*cos(z/2)+sin(x/2).*sin(y/2).*sin(z/2) ...
+        sin(x/2).*cos(y/2).*cos(z/2)-cos(x/2).*sin(y/2).*sin(z/2) ...
+        cos(x/2).*sin(y/2).*cos(z/2)+sin(x/2).*cos(y/2).*sin(z/2) ...
+        cos(x/2).*cos(y/2).*sin(z/2)-sin(x/2).*sin(y/2).*cos(z/2)];
+    

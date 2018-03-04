@@ -1,0 +1,38 @@
+Dataset Source: http://cs.joensuu.fi/sipu/datasets/
+
+Color100
+n = 100 m = 9
+
+spiral*
+n = 312 m = 2 k = 3
+
+R15*
+n = 600 m = 2 k = 15
+
+Aggregation*
+n = 788 m = 2 k = 7
+
+D31*
+n = 3100 m = 2 k = 31
+
+dim032
+n = 1024 m = 32 k = 16
+
+
+finland
+n = 13467 m = 2 k = 15
+
+MINST
+n = 10000 m = 748 k = 10
+
+Pathbased*
+n = 300 m = 2 k = 3
+
+yeast
+n = 1484 m = 8 k = 10
+
+
+n = number of datapoints
+m = dimensionality
+k = optimal number of clusters
+* spectral data-set

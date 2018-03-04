@@ -1,0 +1,51 @@
+Instructions:
+
+Step 1: Compile
+
+> make compile
+
+Step 2: Running
+
+> make run-small
+> make run-medium
+> make run-large
+
+
+Dataset Sources:
+
+This app comes with some default datasets in ./src/datasets
+Dataset Sources: http://cs.joensuu.fi/sipu/datasets/
+You can also create your own datasets as mentioned in the app usage
+
+
+Algorithm Overview:
+
+This benchmark is a spectral clustering algorithm. The major kernels in the program
+are k-means and eigen decomposition.
+
+Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar to each other than to those in other groups (clusters). Clustering belongs to Unsupervised Machine Learning technique where the algorithm tries to find the hidden structure in unlabled data (as opposed to classification where the data is labeled). Cluster analysis is an iterative process of knowledge discovery and hence can be formulated as a multi-objective optimization problem that involves trial and failure until the results with desired properties are achieved.
+
+Modeling Clusters - 
+a. Centroid based models (partition clustering) - K means
+b. Connectivity based models - Spectral Clustering
+c. Density based models
+
+Other distinctions - 
+a. Hard Clustering
+b. Fuzzy (Soft) Clustering
+
+
+K Means - 
+This is a distance based partitioning algorithm. The partitioning representatives (called as centroids) correspond to the mean of each cluster. Euclidian distance is used to compute distances. Centroids are not drawn from the original data set but are created as a function of the underlying data. Initially K centroids are allocated at random. Every iteration refines the centroids and optimally divide the data into K clusters.
+
+Graph View of Clustering -
+In the graph view of the problem, we view each data point as a node in the graph. Each node is connected to every other node in the graph. The edge weight denotes the degree of similarity between the two nodes. Higher the edge weight, more the similarity between the two data-points. If we are able to make a cut in the graph through lowest edge weights, this will partition the graph into multiple clusters. Thus the original clustering problem can be viewed as a graph min-cut problem. However, a min-cut is not always an optimal solution to the clustering problem - as the min-cut will tend to create separate clusters for the outlier data-points. A normalized min-cut is a solution to this problem. A normalized cut is a summation of the cut edge weights divided by the volume of each partition. Minimizing the normalized cut will result in an optimal number of clusters.
+
+Spectral Analysis - 
+The graph problem explained earlier can be easily solved by viewing it as a Linear Algebra problem. We form an adjacency and a degree matrix of the graph constructed above. In addition, we also form a Laplacian matrix from the adjacency and dgree matrices. Laplacian Matrix is given as -
+
+L = D - A
+Normalized Laplacian = (D^1/2)L(D^1/2)T
+
+As can be seen, the Laplacian matrix encodes the connectivity information of the graph. Other notable properties of this matrix are that it is a real, symmetric and positive semidefinite matrix. Thus eigen decomposition of this matrix will give n real eigen values and corresponding eigen vectors, where n is the dimensionality of L and also the number of data-points. Eigen vectors with corresponding eigen values equal to (or close to) zero, gives the optimal disconnected (or connected with min edge weights) components of the graph. Running the k-means on such eigen vectors will result in optimal k clusters in the given dataset.
+
