@@ -2,6 +2,8 @@ March 7, 2018
 
 Welcome to the ADA Portathon!
 
+Common Google Drive Directory: https://tinyurl.com/ada-portathon
+
 High-level overview:
 
 The goal of this exercise is to port benchmarks to be used within the ADA center to RISC-V.
