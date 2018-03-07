@@ -1,3 +1,4 @@
+=== SPLASH ===
 - Changed CC to $riscvgcc in top level Makefile. Seems to work for most apps and kernels.
 - ocean:
         contiguous_partitions: compiles and runs on RISC-V
@@ -7,3 +8,6 @@
 - water-spatial: compiles and runs on RISC-V
 - cholesky: compiles and runs on RISC-V
 - fft: compiles and runs on RISC-V
+
+=== PARSEC ===
+- swaptions: compiles and runs. Do `make CXX=$riscvgpp && $runqemu swaptions X Y Z`
