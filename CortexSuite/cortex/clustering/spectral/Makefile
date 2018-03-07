@@ -1,5 +1,5 @@
 .SUFFIXES: .c .u
-CC= gcc
+CC= $(riscvgcc)
 CFLAGS  = 
 LDFLAGS = -lm
 
@@ -28,13 +28,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) $(CFLAGS) -o spc-large $(LDFLAGS)
 
 run-small:
-	-./spc-small ../datasets/R15 600 2 15 0.707 1 2>&1 | tee ../../results/spc.small
+	$(runqemu) ./spc-small ../datasets/R15 600 2 15 0.707 1 2>&1 | tee ../../results/spc.small
 
 run-medium:
-	-./spc-medium ../datasets/Aggregation 788 2 7 0.707 1 2>&1 | tee ../../results/spc.medium
+	$(runqemu) ./spc-medium ../datasets/Aggregation 788 2 7 0.707 1 2>&1 | tee ../../results/spc.medium
 
 run-large:
-	-./spc-large ../datasets/D31 1600 2 16 0.707 1 2>&1 | tee ../../results/spc.large
+	$(runqemu) ./spc-large ../datasets/D31 1600 2 16 0.707 1 2>&1 | tee ../../results/spc.large
 
 
 clean:

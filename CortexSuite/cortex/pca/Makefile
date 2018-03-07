@@ -1,5 +1,5 @@
 .SUFFIXES: .c .u
-CC= gcc
+CC= $(riscvgcc)
 CFLAGS  = 
 LDFLAGS = -lm
 
@@ -28,13 +28,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) $(CFLAGS) -o pca-large $(LDFLAGS)
 
 run-small:
-	-./pca-small small.data 1593 256 R 2>&1 | tee ../results/pca.small
+	$(runqemu) ./pca-small small.data 1593 256 R 2>&1 | tee ../results/pca.small
 
 run-medium:
-	-./pca-medium medium.data 722 800 R 2>&1 | tee ../results/pca.medium
+	$(runqemu) ./pca-medium medium.data 722 800 R 2>&1 | tee ../results/pca.medium
 
 run-large:
-	-./pca-large large.data 5000 1059 R 2>&1 | tee ../results/pca.large
+	$(runqemu) ./pca-large large.data 5000 1059 R 2>&1 | tee ../results/pca.large
 
 
 clean:

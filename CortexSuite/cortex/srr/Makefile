@@ -1,5 +1,5 @@
 .SUFFIXES: .c .u
-CC= gcc
+CC= $(riscvgcc)
 CFLAGS  = -O2
 LDFLAGS = -lm
 
@@ -27,13 +27,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) $(LARGE) $(CFLAGS) -o srr-large $(LDFLAGS)
 
 run-small:
-	-./srr-small 2>&1 | tee ../results/srr.small
+	$(runqemu) ./srr-small 2>&1 | tee ../results/srr.small
 
 run-medium:
-	-./srr-medium 2>&1 | tee ../results/srr.medium
+	$(runqemu) ./srr-medium 2>&1 | tee ../results/srr.medium
 
 run-large:
-	-./srr-large 2>&1 | tee ../results/srr.large
+	$(runqemu) ./srr-large 2>&1 | tee ../results/srr.large
 
 clean:
 	-rm -f srr-small srr-medium srr-large

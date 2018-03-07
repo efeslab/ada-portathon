@@ -1,5 +1,5 @@
 .SUFFIXES: .c .u
-CC= gcc
+CC= $(riscvgcc)
 CFLAGS  = 
 LDFLAGS = -lm
 
@@ -28,13 +28,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) $(CFLAGS) -o kmeans-large $(LDFLAGS)
 
 run-small:
-	-./kmeans-small ../datasets/yeast 1484 8 10 2>&1 | tee ../../results/kmeans.small
+	$(runqemu) ./kmeans-small ../datasets/yeast 1484 8 10 2>&1 | tee ../../results/kmeans.small
 
 run-medium:
-	-./kmeans-medium ../datasets/finland 13467 2 15 2>&1 | tee ../../results/kmeans.medium
+	$(runqemu) ./kmeans-medium ../datasets/finland 13467 2 15 2>&1 | tee ../../results/kmeans.medium
 
 run-large:
-	-./kmeans-large ../datasets/MINST 10000 748 10 2>&1 | tee ../../results/kmeans.large
+	$(runqemu) ./kmeans-large ../datasets/MINST 10000 748 10 2>&1 | tee ../../results/kmeans.large
 
 
 clean:

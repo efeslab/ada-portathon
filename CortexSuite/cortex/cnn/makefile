@@ -1,4 +1,4 @@
-CC=gcc
+CC=$(riscvgcc)
 CFLAGS=-I.
 SOURCES= main.c mnist_parse.c
 DEPS= mnist_parse.h
@@ -7,6 +7,6 @@ EXECUTABLE=main
 all:
 	$(CC) -o $(EXECUTABLE) $(SOURCES)
 run:
-	./main
+	.$(runqemu) /main
 clean:
 	rm $(EXECUTABLE)

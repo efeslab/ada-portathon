@@ -1,4 +1,4 @@
-CC ?= gcc
+CC ?= $(riscvgcc)
 CFLAGS = -Wall -fPIC
 LDFLAGS = -lm
 LIBS = blas/blas.a
@@ -31,13 +31,13 @@ blas/blas.a: blas/*.c blas/*.h
 	make -C blas OPTFLAGS='$(CFLAGS)' CC='$(CC)'
 
 run-small:
-	-./liblinear-tsmall data/100M/crime_scale 2>&1 | tee ../results/libl.small
+	$(runqemu) ./liblinear-tsmall data/100M/crime_scale 2>&1 | tee ../results/libl.small
 
 run-medium:
-	-./liblinear-tmedium data/10B/epsilon 2>&1 | tee ../results/libl.medium
+	$(runqemu) ./liblinear-tmedium data/10B/epsilon 2>&1 | tee ../results/libl.medium
 
 run-large:
-	-./liblinear-tlarge data/100B/kdda 2>&1 | tee ../results/libl.large
+	$(runqemu) ./liblinear-tlarge data/100B/kdda 2>&1 | tee ../results/libl.large
 
 
 clean:

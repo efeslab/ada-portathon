@@ -1,5 +1,5 @@
 .SUFFIXES: .c .u
-CC= gcc
+CC= $(riscvgcc)
 CFLAGS  = 
 LDFLAGS = -lm
 
@@ -16,13 +16,13 @@ compile:
 run-all: run-small run-medium run-large
 
 run-small:
-	-./a.out small.txt 2>&1 | tee ../results/svd.small
+	$(runqemu) ./a.out small.txt 2>&1 | tee ../results/svd.small
 
 run-medium:
-	-./a.out med.txt 2>&1 | tee ../results/svd.medium
+	$(runqemu) ./a.out med.txt 2>&1 | tee ../results/svd.medium
 
 run-large:
-	-./a.out large.txt 2>&1 | tee ../results/svd.large
+	$(runqemu) ./a.out large.txt 2>&1 | tee ../results/svd.large
 
 clean:
 	-rm a.out
