@@ -14,6 +14,15 @@ For now, the final check to see if the output is correct is not performed.
 We are working on fixing it. However, this should not change the computation
 or behavior of the benchmarks at all.
 
+## For RISC-V
+Please compile with option `CC=$riscvgcc`
+
+	make CC=$riscvgcc
+
+and run with 
+
+	make
+
 
 ## Licensing
 
