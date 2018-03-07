@@ -10,11 +10,11 @@ $(KERN): $(FILES) ../../common/harness.c
 	$(CC) $(CFLAGS) -I../../common -o $(KERN) $(SRCS) ../../common/harness.c -lm
 
 run: $(KERN) input.data check.data
-	$(runqemu) ./$(KERN) input.data check.data
+	$(RUN_BINARY) ./$(KERN) input.data check.data
 
 generate: $(FILES) generate.c
 	$(CC) $(CFLAGS) -I../../common -o generate $(SRCS) generate.c -lm
-	./generate
+	$(RUN_BINARY) ./generate
 
 hls: $(KERN).c $(KERN).h
 	vivado_hls hls.tcl

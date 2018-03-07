@@ -20,20 +20,20 @@ BENCHMARKS=\
 #FIXME\
 	backprop/backprop \
 
-CC=$(riscvgcc)
-
 CFLAGS=-O3 -Wall -Wno-unused-label
+
 
 .PHONY: build run generate all test clean
 
+
 build:
-	@( for b in $(BENCHMARKS); do $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" -C $$b; done )
+	@( for b in $(BENCHMARKS); do $(MAKE) CC="$(COMPILER)"  CFLAGS="$(CFLAGS)" -C $$b; done )
 
 run:
-	@( for b in $(BENCHMARKS); do $(MAKE) CFLAGS="$(CFLAGS)" -C $$b run; done )
+	@( for b in $(BENCHMARKS); do $(MAKE) RUN_BINARY="$(RUN_BINARY)" CFLAGS="$(CFLAGS)" -C $$b run; done )
 
 generate:
-	@( for b in $(BENCHMARKS); do $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" -C $$b generate; done )
+	@( for b in $(BENCHMARKS); do $(MAKE) CC="$(COMPILER)" RUN_BINARY="$(RUN_BINARY)" CFLAGS="$(CFLAGS)" -C $$b generate; done )
 
 
 ### For regression tests
