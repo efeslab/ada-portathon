@@ -21,4 +21,8 @@ raytrace.c: raytrace.c.in incl.h address.h
 incl.h:	user_options.h const.h my_types.h global.h macros.h address.h
 
 libtiff/libtiff.a:
-	make -C libtiff
+	$(MAKE) -C libtiff all
+
+clean:
+	$(MAKE) -C libtiff clean
+	rm -rf *.c *.o *.h $(TARGET)

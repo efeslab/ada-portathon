@@ -160,7 +160,7 @@ installh: ${INCS}
 	done
 
 clean:
-	rm -f ${ALL} ${OBJS} core a.out mkg3states g3states.h
+	rm -f ${ALL} ${OBJS} core a.out mkg3states # g3states.h
  
 tags:	${SRCS}
 	${CTAGS} ${SRCS}
