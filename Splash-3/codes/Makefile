@@ -16,6 +16,22 @@ all:
 	$(MAKE) -C kernels/lu/non_contiguous_blocks
 	$(MAKE) -C kernels/radix
 
+riscv:
+	$(MAKE) CC=$(riscvgcc) -C apps/barnes
+	$(MAKE) CC=$(riscvgcc) -C apps/fmm
+	$(MAKE) CC=$(riscvgcc) -C apps/ocean/contiguous_partitions
+	$(MAKE) CC=$(riscvgcc) -C apps/ocean/non_contiguous_partitions
+	$(MAKE) CC=$(riscvgcc) -C apps/radiosity
+	$(MAKE) CC=$(riscvgcc) -C apps/raytrace
+	$(MAKE) CC=$(riscvgcc) -C apps/volrend
+	$(MAKE) CC=$(riscvgcc) -C apps/water-nsquared
+	$(MAKE) CC=$(riscvgcc) -C apps/water-spatial
+	$(MAKE) CC=$(riscvgcc) -C kernels/cholesky
+	$(MAKE) CC=$(riscvgcc) -C kernels/fft
+	$(MAKE) CC=$(riscvgcc) -C kernels/lu/contiguous_blocks
+	$(MAKE) CC=$(riscvgcc) -C kernels/lu/non_contiguous_blocks
+	$(MAKE) CC=$(riscvgcc) -C kernels/radix
+
 clean:
 	$(MAKE) -C apps/barnes clean
 	$(MAKE) -C apps/fmm clean
