@@ -1,0 +1,31 @@
+Bugs encountered:
+
+There were multiple timingUtils.h which contains inline assembly for the following three functions:
+
+#include <time.h>
+#define magic_timing_begin(cycleLo, cycleHi) {\
+      asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+}\
+  
+#define magic_timing_end(cycleLo, cycleHi) {\
+      unsigned tempCycleLo, tempCycleHi; \
+      asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+      cycleLo = tempCycleLo-cycleLo;\
+      cycleHi = tempCycleHi - cycleHi;\
+}\
+
+We change this into following:
+
+#define magic_timing_begin(cycleLo, cycleHi) {\
+    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+}\
+
+#define magic_timing_end(cycleLo, cycleHi) {\
+    unsigned tempCycleLo, tempCycleHi; \
+    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+    cycleLo = tempCycleLo-cycleLo;\
+    cycleHi = tempCycleHi - cycleHi;\
+}\
+
+Changes in the Makefile:
+
