@@ -146,7 +146,16 @@ tif_fax3.o: tif_fax3.c g3states.h t4.h tif_fax3.h
 
 g3states.h: mkg3states.c t4.h
 	${CC} -o mkg3states ${CFLAGS} mkg3states.c
-	${runqemu} ./mkg3states -c > g3states.h
+	case "${CC}" in \
+		gcc) \
+			echo "HIT1"; \
+			./mkg3states -c > g3states.h; \
+			;; \
+		*) \
+			echo "HIT2"; \
+			${runqemu} ./mkg3states -c > g3states.h; \
+			;; \
+	esac
 
 install: all installh
 	-for i in ${ALL}; do \
