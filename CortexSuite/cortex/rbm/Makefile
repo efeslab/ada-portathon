@@ -20,13 +20,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) -DUSERS=100 -DTEST_USERS=100 -DMOVIES=100 -DLOOPS=200 -o rbm-large $(LDFLAGS)
 
 run-small:
-	$(qemu) ./rbm-small | tee ../results/rbm.small
+	$(runqemu) ./rbm-small | tee ../results/rbm.small
 
 run-medium:
-	$(qemu) ./rbm-medium  | tee ../results/rbm.medium
+	$(runqemu) ./rbm-medium  | tee ../results/rbm.medium
 
 run-large:
-	$(qemu) ./rbm-large  | tee ../results/rbm.large
+	$(runqemu) ./rbm-large  | tee ../results/rbm.large
 
 clean:
 	-rm rbm-small rbm-medium rbm-large out.txt
