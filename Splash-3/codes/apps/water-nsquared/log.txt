@@ -1,0 +1,8 @@
+Log of errors in porting to riscv
+
+inputs/n512-p1024 fails with a segfault
+ - this fails even with regular gcc :(
+note: use test_inputs.bash to check all input files 
+
+
+
