@@ -1,11 +1,16 @@
-#ifdef GCC
+#include <time.h>
+static clock_t t1,t2;
 #define magic_timing_begin(cycleLo, cycleHi) {\
-    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+    t1 = clock();\
+    cycleLo = (int)((long)t1);\
+    cycleHi = (int)((long)t1>>32);\
 }\
 
 #define magic_timing_end(cycleLo, cycleHi) {\
     unsigned tempCycleLo, tempCycleHi; \
-    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+    t2 = clock();\
+    tempCycleLo = (int)((long)t2);\
+    tempCycleHi = (int)((long)t1>>32);\
     cycleLo = tempCycleLo-cycleLo;\
     cycleHi = tempCycleHi - cycleHi;\
 }\
@@ -19,7 +24,7 @@
  
 
 
-#endif
+
 
 #ifdef METRO
  
