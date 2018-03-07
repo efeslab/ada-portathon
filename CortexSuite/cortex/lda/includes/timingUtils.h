@@ -1,16 +1,17 @@
 #include <time.h>
 static clock_t t1,t2;
 #define magic_timing_begin(cycleLo, cycleHi) {\
-    t1 = clock();\
-    cycleLo = (int)((long)t1);\
-    cycleHi = (int)((long)t1>>32);\
+    unsigned long temp;\ 
+    asm volatile ("rdcycle %[x]\n\t": [x] "=r" (temp) );\ 
+    cycleHi = temp>>32;\ 
+    cycleLo = temp;\
 }\
 
 #define magic_timing_end(cycleLo, cycleHi) {\
     unsigned tempCycleLo, tempCycleHi; \
-    t2 = clock();\
-    tempCycleLo = (int)((long)t2);\
-    tempCycleHi = (int)((long)t1>>32);\
+    asm volatile ("rdcycle %[x]\n\t": [x] "=r" (temp) );\
+    tempCycleLo = (int)((long)temp);\
+    tempCycleHi = (int)((long)temp>>32);\
     cycleLo = tempCycleLo-cycleLo;\
     cycleHi = tempCycleHi - cycleHi;\
 }\
