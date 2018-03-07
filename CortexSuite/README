@@ -2,7 +2,7 @@ UC San Diego
 CortexSuite
 
 
-Compile the benchmarks with the command:
+##Compile the benchmarks with the command [native mode]:
 
 _make compile_
 
@@ -21,3 +21,11 @@ _make cycles_
 
 This will print the cycle count for small, medium, and large datasets if applicable
 for each algorithm
+
+##Compile the benchmarks with the command [cross-compilation mode]
+
+To cross-compile the benchmarks for RISC-V, run the make command with the following parameters:
+`CC=<path/to/riscvgcc cross-compiler> riscv=1`
+
+Example:
+To compile the "lda" benchmark: `make compile CC=$riscvgcc riscv=1`
