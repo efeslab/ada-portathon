@@ -1,0 +1,8 @@
+Ispell was not successfully ported.  Log as follows:
+
+Edited CC value ispell config.sh (called in Makefile to set $$CC in Makefile)
+Changes CFLAGS in ispell config.sh to include "std=c99"
+Moved corrupted files away from languages directory (question marks in file names suck)
+Deleted corrupted files entirely (with many escape sequences and asteriks)
+
+Current State: running make seems to indeterministically create corrupted files in the ./languages/american directory. File "buildhash", which calls files "Afile" through "Hfile" in the buildhash.c code, seems to try to call files with names that contain non-typical ASCII characters (i.e. characters that the keyboard doesn't have).
