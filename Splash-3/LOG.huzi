@@ -1,0 +1,9 @@
+- Changed CC to $riscvgcc in top level Makefile. Seems to work for most apps and kernels.
+- ocean:
+        contiguous_partitions: compiles and runs on RISC-V
+        non_contiguous_partitions: compiles on RISC-V; segfaults on both x86 and RISC-V
+- radiosity: compiles and runs on RISC-V
+- water-nsquared: compiles and runs on RISC-V
+- water-spatial: compiles and runs on RISC-V
+- cholesky: compiles and runs on RISC-V
+- fft: compiles and runs on RISC-V
