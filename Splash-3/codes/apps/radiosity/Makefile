@@ -37,4 +37,6 @@ glibps/glibps.a:
 	$(MAKE) -C glibps
 
 clean:
-	rm -rf glibdumb/glib.a glibdumb/glib.o glibps/glibps.a glibps/glibps.o
+	rm -f *.o
+	$(MAKE) -C glibps clean
+	$(MAKE) -C glibdumb clean
