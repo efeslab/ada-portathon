@@ -3,12 +3,16 @@ CC= gcc
 CFLAGS  = 
 LDFLAGS = -lm
 
+ifneq ($(riscv),)
+        CFLAGS += -Driscv
+endif
 
+INCLUDES = -I../../../includes -I$(CURDIR)
 
-INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
+#INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
 COMPILE_C = $(CC) $(CFLAGS) -O2 $(INCLUDES)
 COMMON_SRC := $(wildcard $(CURDIR)/*.c)
-C_SRC := $(wildcard $(CURDIR)/includes/*.c)
+C_SRC := $(wildcard ../../../includes/*.c)
 SMALL = 
 MEDIUM =
 LARGE =
