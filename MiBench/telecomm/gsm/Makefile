@@ -3,10 +3,9 @@
 # Universitaet Berlin.  See the accompanying file "COPYRIGHT" for
 # details.  THERE IS ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.
 #
-
+include ../../env
 
 # Machine dependent flags you must configure to port
-
 SASR	= -DSASR
 ######### Define SASR if >> is a signed arithmetic shift (-1 >> 1 == -1)
 
@@ -32,11 +31,12 @@ SASR	= -DSASR
 # CC		= /usr/lang/acc
 # CCFLAGS 	= -c -O
 
-CC		= gcc -ansi -pedantic -static
+#CC		= gcc -ansi -pedantic -static
+# /home/ada/portathon/freedom-u-sdk/toolchain/bin/riscv64-unknown-linux-gnu-gcc -ansi -static
 # ARM gcc doesn't like the -O1 here...
 #CCFLAGS 	= -c -O1 -DSTUPID_COMPILER -DNeedFunctionPrototypes=1
+CC+= -ansi -static
 CCFLAGS 	= -c -O3 -DSTUPID_COMPILER -DNeedFunctionPrototypes=1
-
 LD 		= $(CC)
 
 # LD		= gcc
