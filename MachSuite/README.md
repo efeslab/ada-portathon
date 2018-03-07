@@ -17,7 +17,10 @@ or behavior of the benchmarks at all.i
 Set the environment variables COMPILER and RUN_BINARY in the source file setup_riscv_env.sh
 for RISC-V and setup_native_env.sh for native enviroment
 
-## For RISC-V, run the command:
+## For RISC-V
+# Ensure that environment variable "riscvgcc" points to your riscv compiler,
+# and that environment variable "runqemu" points to your QEMU usermode binary
+# with the appropriate arugments. Then, run the command:
 	source setup_riscv_env.sh
 
 ## For native environement, run the command: 
