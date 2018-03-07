@@ -25,7 +25,7 @@ riscv:
 	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/ocean/non_contiguous_partitions
 	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/radiosity
 	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/raytrace
-	# $(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/volrend
+	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/volrend
 	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/water-nsquared
 	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/water-spatial
 	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C kernels/cholesky
