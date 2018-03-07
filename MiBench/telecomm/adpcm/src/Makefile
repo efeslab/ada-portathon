@@ -11,7 +11,7 @@
 # Also, on Sun machines, in order to use the SPIXTOOLS and SHADE,
 # uncomment this option: -static.
 #
-CC = gcc
+CC = ${TARGET_CC}
 LFLAGS = -mv8
 LFLAGS = $(LFLAGS) -static
 #

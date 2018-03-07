@@ -1,0 +1,65 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:743:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ main(){return(0);}
+ ^
+configure: In function 'main':
+configure:830:67: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+ if (XOR (islower (i), ISLOWER (i)) || toupper (i) != TOUPPER (i)) exit(2);
+                                                                   ^
+configure:830:67: warning: incompatible implicit declaration of built-in function 'exit'
+configure:830:67: note: include '<stdlib.h>' or provide a declaration of 'exit'
+configure:831:1: warning: incompatible implicit declaration of built-in function 'exit'
+ exit (0); }
+ ^
+configure:831:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+configure: In function 't':
+configure:1247:1: warning: implicit declaration of function 'gdbm_open' [-Wimplicit-function-declaration]
+ gdbm_open()
+ ^
+/usr/bin/ld: cannot find -lgdbm
+collect2: error: ld returned 1 exit status
+configure: In function 't':
+configure:1334:1: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+ atan()
+ ^
+configure:1334:1: warning: incompatible implicit declaration of built-in function 'atan'
+configure:1334:1: note: include '<math.h>' or provide a declaration of 'atan'
+configure:1334:1: error: too few arguments to function 'atan'
+configure: In function 't':
+configure:1373:1: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+ atan()
+ ^
+configure:1373:1: warning: incompatible implicit declaration of built-in function 'atan'
+configure:1373:1: note: include '<math.h>' or provide a declaration of 'atan'
+configure:1373:1: error: too few arguments to function 'atan'
+configure:1461:27: fatal error: X11/Intrinsic.h: No such file or directory
+ #include <$x_direct_test_include>
+                           ^
+compilation terminated.
+configure: In function 't':
+configure:1527:1: warning: implicit declaration of function 'XtMalloc' [-Wimplicit-function-declaration]
+ ${x_direct_test_function}()
+ ^
+/usr/bin/ld: cannot find -lXt
+collect2: error: ld returned 1 exit status
+configure: In function 't':
+configure:1840:1: warning: implicit declaration of function 'socket' [-Wimplicit-function-declaration]
+ socket()
+ ^
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+configure: In function 't':
+configure:1873:1: warning: implicit declaration of function 'inet_addr' [-Wimplicit-function-declaration]
+ inet_addr()
+ ^
+configure: In function 't':
+configure:1906:1: warning: implicit declaration of function 'XauReadAuth' [-Wimplicit-function-declaration]
+ XauReadAuth()
+ ^
+/tmp/ccaTiaQn.o: In function `t':
+/home/ada/portathon/benchmarks/MiBench/office/rsynth/configure:1906: undefined reference to `XauReadAuth'
+collect2: error: ld returned 1 exit status
+configure:1944:28: fatal error: audio/audiolib.h: No such file or directory
+compilation terminated.

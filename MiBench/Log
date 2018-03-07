@@ -1,0 +1,48 @@
+://github.com/efeslab/ada-portathon
+ADA Portathon 3/7/2018
+
+|- General Changes in All Benchmarks:
+
+Set CC=${TARGET_CC}
+Change gcc to $(CC) in Makefiles if applicable
+Set the TARGET_CC environmental variable as $riscvgcc when cross-compiling with:
+
+export TARGET_CC=$riscvgcc
+
+|- MiBench/network/patricia
+
+Error: patricia_test.c:46:10: fatal error: rpc/rpc.h: No such file or directory
+Fix: Include the sunrpc directory from riscv-glibc
+
+RISCV_FLAGS=-I/home/ada/portathon/freedom-u-sdk/riscv-gnu-toolchain/riscv-glibc/sunrpc/
+
+$(CC) -static patricia.c patricia_test.c $(RISCV_FLAGS) -O3 -o patricia
+
+Run Scripts Changes:
+$runqemu ./dijkstra_large(or small) input.dat > output_large(or small).dat
+
+|- MiBench/office/rsynth
+
+Requires <multimedia/libaudio.h> which is not available in RISCV toolchain.
+
+|- MiBench/security/pgp
+
+Assembly sources need manual translation to RISCV.
+
+|- MiBench/security/rijndael
+
+Invalid casting of fpos_t struct to char in source code, change to:
+
+inbuf[0] = ((char) flen.__pos & 15) | (inbuf[0] & ~15);
+
+|- MiBench/security/sha
+
+Use of GCC strip binary depends on target architecture:
+
+ifeq ($(CC), $(riscvgcc))
+        /home/ada/portathon/freedom-u-sdk/toolchain/bin/riscv64-unknown-linux-gnu-strip $@
+else
+        strip $@
+endif
+
+
