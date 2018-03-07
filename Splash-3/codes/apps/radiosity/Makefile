@@ -35,3 +35,8 @@ glibdumb/glib.a:
 
 glibps/glibps.a:
 	$(MAKE) -C glibps
+
+clean:
+	rm -rf *.c *.h *.o $(TARGET)
+	$(MAKE) -C glibdumb clean
+	$(MAKE) -C glibps clean
