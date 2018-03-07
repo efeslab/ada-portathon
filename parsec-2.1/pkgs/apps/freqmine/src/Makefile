@@ -6,6 +6,9 @@ CXXFLAGS += -Wno-deprecated
 
 all: $(TARGET)
 
+riscv:
+	make CXX=$(riscvgpp)
+
 $(TARGET): fpgrowth.o data.o fp_tree.o buffer.o fsout.o fp_node.o wtime.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) fpgrowth.o data.o fp_tree.o buffer.o fsout.o fp_node.o wtime.o $(LIBS) -o $(TARGET)
 

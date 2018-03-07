@@ -1,0 +1,7 @@
+Building and running freqmine for RISC-V:
+1) Set environment variable "riscvgpp" to the appropriate path for the system's RISC-V C++ compiler
+2) Build with "make clean && make riscv"
+3) Run with:
+    a) Emulation: "<RISC-V qemu path> freqmine <infile> <MINSUP> [<outfile>]", parameters the same as running on x86
+    b) Native RISC-V: same as native x86
+4) To rebuild for x86, "make clean && make"
