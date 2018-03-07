@@ -15,13 +15,14 @@ We are working on fixing it. However, this should not change the computation
 or behavior of the benchmarks at all.
 
 ## For RISC-V
-Please compile with option `CC=$riscvgcc`
+This repo is specific for riscv, we set `CC=$(riscvgcc)` in the top-level Makefile and change the `run` option to invoke
+QEMU. QEMU should be set by environmental variable `runqemu` and gcc with `riscvgcc`.
 
-	make CC=$riscvgcc
+	make
 
 and run with 
 
-	make
+	make run
 
 
 ## Licensing

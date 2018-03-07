@@ -20,6 +20,8 @@ BENCHMARKS=\
 #FIXME\
 	backprop/backprop \
 
+CC=$(riscvgcc)
+
 CFLAGS=-O3 -Wall -Wno-unused-label
 
 .PHONY: build run generate all test clean
