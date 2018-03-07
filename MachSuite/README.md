@@ -18,9 +18,11 @@ or behavior of the benchmarks at all.
 This repo is specific for riscv, we set `CC=$(riscvgcc)` in the top-level Makefile and change the `run` option to invoke
 QEMU. QEMU should be set by environmental variable `runqemu` and gcc with `riscvgcc`.
 
+Compile for riscv by command:
+
 	make
 
-and run with 
+and run on QEMU with:
 
 	make run
 
