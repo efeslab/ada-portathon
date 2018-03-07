@@ -5,6 +5,10 @@
 
 subdirs = lda liblinear motion-estimation pca rbm sphinx srr svd3
 
+ifneq ($(riscv),)
+        CFLAGS += -Driscv
+endif
+
 vision:
 	make -C ${CURDIR}/vision/ c-run
 
