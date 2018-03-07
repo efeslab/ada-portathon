@@ -1,0 +1,6 @@
+Dprintf macro overlapped dprintf stdio.h function.
+Timeval struct redfined, commented it out.
+Some calls did not use EXP variable, added those in.
+
+To make native:    run 'make'
+To make for riscv: run 'make CC=$riscvgcc EXP="$runqemu ./" EXPP="$runqemu"'

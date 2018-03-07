@@ -6,6 +6,8 @@ CFLAGS?=-O3 -Wall -Wno-unused-label
 SRCS=$(KERN).c local_support.c ../../common/support.c
 FILES=$(SRCS) $(KERN).h ../../common/support.h
 
+CC=$(riscvgcc)
+
 $(KERN): $(FILES) ../../common/harness.c
 	$(CC) $(CFLAGS) -I../../common -o $(KERN) $(SRCS) ../../common/harness.c
 

@@ -37,9 +37,9 @@
 #else
 #  include <time.h>
 #  ifndef __DECC
-struct timeval {
-	long tv_sec, tv_usec;
-};
+//struct timeval {
+//	long tv_sec, tv_usec;
+//};
 #  endif
 struct timezone {
 	int tz_minuteswest, tz_dsttime;

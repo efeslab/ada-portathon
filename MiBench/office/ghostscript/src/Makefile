@@ -175,6 +175,7 @@ CONFIG=
 
 #CC=gcc -mv8 -static
 CC=gcc -static
+#CC=$(riscvgcc) -static
 #CC=gcc
 
 # Define the name of the linker for the final link step.
@@ -375,8 +376,10 @@ XEAUX=
 CAT=cat
 D=/
 EXPP=
+#EXPP=$(runqmeu) 
 #EXP=sim-safe	 ./
 EXP=./
+#EXP=$(runqemu) ./
 SHELL=/bin/sh
 SH=$(SHELL)
 SHP=$(SH) $(EXP)
@@ -650,7 +653,7 @@ begin:
 # Auxiliary programs
 
 arch.h: $(GENARCH_XE)
-	$(EXPP) $(EXP)genarch arch.h
+	$(EXP)genarch arch.h
 
 # Macros for constructing the *.dev files that describe features and
 # devices.
@@ -5476,14 +5479,14 @@ $(GENINIT_XE): geninit.c $(AK) $(stdio__h) $(string__h)
 # traps the error with ||.
 INCLUDE=/usr/include
 gconfig_.h: $(UNIXTAIL_MAK) $(ECHOGS_XE)
-#	sim-safe	 ./echogs -w gconfig_.h -x 2f2a -s This file was generated automatically. -s -x 2a2f
-	./echogs -w gconfig_.h -x 2f2a -s This file was generated automatically. -s -x 2a2f
-	if ( test -f $(INCLUDE)/dirent.h ); then 	 ./echogs -a gconfig_.h -x 23 define HAVE_DIRENT_H; else true; fi
-	if ( test -f $(INCLUDE)/ndir.h ); then 	 ./echogs -a gconfig_.h -x 23 define HAVE_NDIR_H; else true; fi
-	if ( test -f $(INCLUDE)/sys/dir.h ); then 	 ./echogs -a gconfig_.h -x 23 define HAVE_SYS_DIR_H; else true; fi
-	if ( test -f $(INCLUDE)/sys/ndir.h ); then 	 ./echogs -a gconfig_.h -x 23 define HAVE_SYS_NDIR_H; else true; fi
-	if ( test -f $(INCLUDE)/sys/time.h ); then 	 ./echogs -a gconfig_.h -x 23 define HAVE_SYS_TIME_H; else true; fi
-	if ( test -f $(INCLUDE)/sys/times.h ); then 	 ./echogs -a gconfig_.h -x 23 define HAVE_SYS_TIMES_H; else true; fi
+#	sim-safe	 $(EXP)echogs -w gconfig_.h -x 2f2a -s This file was generated automatically. -s -x 2a2f
+	$(EXP)echogs -w gconfig_.h -x 2f2a -s This file was generated automatically. -s -x 2a2f
+	if ( test -f $(INCLUDE)/dirent.h ); then 	 $(EXP)echogs -a gconfig_.h -x 23 define HAVE_DIRENT_H; else true; fi
+	if ( test -f $(INCLUDE)/ndir.h ); then 	 $(EXP)echogs -a gconfig_.h -x 23 define HAVE_NDIR_H; else true; fi
+	if ( test -f $(INCLUDE)/sys/dir.h ); then 	 $(EXP)echogs -a gconfig_.h -x 23 define HAVE_SYS_DIR_H; else true; fi
+	if ( test -f $(INCLUDE)/sys/ndir.h ); then 	 $(EXP)echogs -a gconfig_.h -x 23 define HAVE_SYS_NDIR_H; else true; fi
+	if ( test -f $(INCLUDE)/sys/time.h ); then 	 $(EXP)echogs -a gconfig_.h -x 23 define HAVE_SYS_TIME_H; else true; fi
+	if ( test -f $(INCLUDE)/sys/times.h ); then 	 $(EXP)echogs -a gconfig_.h -x 23 define HAVE_SYS_TIMES_H; else true; fi
 
 # ----------------------------- Main program ------------------------------ #
 
@@ -5519,10 +5522,10 @@ $(GS_A): $(INT_ARCHIVE_ALL)
 # The resetting of the environment variables to empty strings is for SCO Unix,
 # which has limited environment space.
 $(GS_XE): ld.tr echogs $(XE_ALL)
-	 ./echogs -w ldt.tr -n - $(CCLD) $(LDFLAGS) $(XLIBDIRS) -o $(GS_XE)
-	 ./echogs -a ldt.tr -n -s gs.$(OBJ) -s
+	 $(EXP)echogs -w ldt.tr -n - $(CCLD) $(LDFLAGS) $(XLIBDIRS) -o $(GS_XE)
+	 $(EXP)echogs -a ldt.tr -n -s gs.$(OBJ) -s
 	cat ld.tr >>ldt.tr
-	 ./echogs -a ldt.tr -s - $(EXTRALIBS)
+	 $(EXP)echogs -a ldt.tr -s - $(EXTRALIBS)
 	LD_RUN_PATH=$(XLIBDIR); export LD_RUN_PATH; \
 	XCFLAGS= XINCLUDE= XLDFLAGS= XLIBDIRS= XLIBS= \
 	FEATURE_DEVS= DEVICE_DEVS= DEVICE_DEVS1= DEVICE_DEVS2= DEVICE_DEVS3= \
