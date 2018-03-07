@@ -1,0 +1,95 @@
+./cortex/clustering/spectral/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/clustering/spectral/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/clustering/spectral/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/clustering/spectral/includes/timingUtils.h:38:    asm volatile( \
+./cortex/clustering/spectral/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/clustering/spectral/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+./cortex/clustering/kmeans/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/clustering/kmeans/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/clustering/kmeans/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/clustering/kmeans/includes/timingUtils.h:38:    asm volatile( \
+./cortex/clustering/kmeans/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/clustering/kmeans/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+./cortex/pca/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/pca/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/pca/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/pca/includes/timingUtils.h:38:    asm volatile( \
+./cortex/pca/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/pca/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/word2vec/vectors.bin matches
+./cortex/motion-estimation/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/motion-estimation/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/motion-estimation/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/motion-estimation/includes/timingUtils.h:38:    asm volatile( \
+./cortex/motion-estimation/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/motion-estimation/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/motion-estimation/LR/BookCase/Book_case1.mat matches
+./cortex/svd3/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/svd3/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/svd3/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/svd3/includes/timingUtils.h:38:    asm volatile( \
+./cortex/svd3/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/svd3/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/svd3/common/.svn/text-base/fDeepCopyRange.h.gch.svn-base matches
+./cortex/svd3/common/.svn/text-base/timingUtils.h.svn-base:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/svd3/common/.svn/text-base/timingUtils.h.svn-base:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/svd3/common/.svn/text-base/timingUtils.h.svn-base:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/svd3/common/.svn/text-base/timingUtils.h.svn-base:38:    asm volatile( \
+./cortex/svd3/common/.svn/text-base/timingUtils.h.svn-base:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/svd3/common/.svn/text-base/timingUtils.h.svn-base:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/svd3/common/fDeepCopyRange.h.gch matches
+Binary file ./cortex/svd3/common/sdvbs_common.h.gch matches
+./cortex/svd3/common/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/svd3/common/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/svd3/common/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/svd3/common/timingUtils.h:38:    asm volatile( \
+./cortex/svd3/common/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/svd3/common/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/svd3/common/timingUtils.h.gch matches
+./cortex/sphinx/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/sphinx/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/sphinx/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/sphinx/includes/timingUtils.h:38:    asm volatile( \
+./cortex/sphinx/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/sphinx/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/sphinx/language_model/HUB4/model.DMP matches
+./cortex/liblinear/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/liblinear/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/liblinear/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/liblinear/includes/timingUtils.h:38:    asm volatile( \
+./cortex/liblinear/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/liblinear/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+./cortex/srr/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/srr/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/srr/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/srr/includes/timingUtils.h:38:    asm volatile( \
+./cortex/srr/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/srr/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./cortex/srr/LR/BookCase/Book_case1.mat matches
+./cortex/rbm/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/rbm/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/rbm/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/rbm/includes/timingUtils.h:38:    asm volatile( \
+./cortex/rbm/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/rbm/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+./cortex/lda/includes/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./cortex/lda/includes/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./cortex/lda/includes/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./cortex/lda/includes/timingUtils.h:38:    asm volatile( \
+./cortex/lda/includes/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./cortex/lda/includes/timingUtils.h:60://    asm volatile( "nop\n\t");\
+./vision/common/matlab/timingFuncs/cycle.h:226:     asm volatile("rdtsc" : "=a" (a), "=d" (d)); 
+./vision/common/matlab/timingFuncs/cycle.h:242:    asm(" rdtsc; shl    $0x20,%rdx; mov    %eax,%eax; or     %rdx,%rax;    ");
+./vision/common/matlab/timingFuncs/cycle.h:428:     cc = asm("rpcc %v0");
+./vision/common/matlab/cycle.h:226:     asm volatile("rdtsc" : "=a" (a), "=d" (d)); 
+./vision/common/matlab/cycle.h:242:    asm(" rdtsc; shl    $0x20,%rdx; mov    %eax,%eax; or     %rdx,%rax;    ");
+./vision/common/matlab/cycle.h:428:     cc = asm("rpcc %v0");
+Binary file ./vision/common/c/fDeepCopyRange.h.gch matches
+./vision/common/c/timingUtils.h:3:    asm volatile( "rdtsc": "=a" (cycleLo), "=d" (cycleHi)); \
+./vision/common/c/timingUtils.h:8:    asm volatile( "rdtsc": "=a" (tempCycleLo), "=d" (tempCycleHi)); \
+./vision/common/c/timingUtils.h:27:    asm volatile( "mfsr $8, CYCLE_LO\n\t"  \
+./vision/common/c/timingUtils.h:38:    asm volatile( \
+./vision/common/c/timingUtils.h:50:    asm volatile( "addu $8, %0, $0\n\t" \
+./vision/common/c/timingUtils.h:60://    asm volatile( "nop\n\t");\
+Binary file ./vision/benchmarks/texture_synthesis/src/matlabPyrTools/MEX/.FBCIndex matches
+Binary file ./vision/benchmarks/texture_synthesis/src/matlab/MEX/.FBCIndex matches
