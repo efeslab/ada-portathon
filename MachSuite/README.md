@@ -14,21 +14,22 @@ For now, the final check to see if the output is correct is not performed.
 We are working on fixing it. However, this should not change the computation
 or behavior of the benchmarks at all.i
 
-# For RISC-V
+# Setting up for RISC-V
 Ensure that environment variable "riscvgcc" points to your riscv compiler,
 and that environment variable "runqemu" points to your QEMU usermode binary
 with the appropriate arugments. Then, run the command:
 	source setup_riscv_env.sh
 
-# For native environement
+# Setting up for native environement
 Run the command: 
 	source setup_native_env.sh
 
-Compile for riscv by command:
+# Compilation and running the suite
+To compile the benchmarks, run:
 
 	make
 
-and run on QEMU with:
+To run your binaries:
 
 	make run
 
