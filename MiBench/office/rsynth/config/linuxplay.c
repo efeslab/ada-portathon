@@ -38,7 +38,7 @@ long samp_rate = SAMP_RATE;
 
 static int dev_fd = -1;
  /* file descriptor for audio device */
-char *dev_file = "/dev/sbdsp";
+char *dev_file = "/dev/dsp";
 
 static int linear_fd = -1;
 

@@ -1,0 +1,19 @@
+Needed to regenerate configure file.
+Needed to install libaudio-dev for audio library
+Needed to install osspd-alsa for /dev/dsp
+The original device id /dev/sbdsp but newer version use /dev/dsp so we need to change the defaul path.
+
+To compile for x86:
+    autoconf
+    ./configure linux
+    make say
+    make nasay
+
+There is no audiolib for riscv.
+
+(Theoretical) To compiler for riscv:
+    autoconf
+    ./configure linux
+    make CC=$riscvgcc CPPFLAGS="-I ." say	<-- won't run correctly, needs an audio device
+    make CC=$riscvgcc CPPFLAGS="-I ." nasay	<-- doesn't work needs libaudio
+
