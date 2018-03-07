@@ -27,5 +27,4 @@ We change this into following:
     cycleHi = tempCycleHi - cycleHi;\
 }\
 
-Changes in the Makefile:
-
+Changes in the Makefile: compile commands use $riscvgcc rather than gcc and run commands use $runqemu
