@@ -139,14 +139,14 @@ all:	 ${ALL}
 ${ALL}:	${OBJS}
 	${AR} rc libtiff.a $?
 
-${OBJS}: tiff.h tiffcompat.h tiffioP.h
+$(OBJS): tiff.h tiffcompat.h tiffioP.h
 tif_compress.o: tif_compress.c Makefile
 	${CC} -c ${CFLAGS} ${CONF_COMPRESSION} tif_compress.c
 tif_fax3.o: tif_fax3.c g3states.h t4.h tif_fax3.h
 
 g3states.h: mkg3states.c t4.h
 	${CC} -o mkg3states ${CFLAGS} mkg3states.c
-	./mkg3states -c > g3states.h
+	${runqemu} ./mkg3states -c > g3states.h
 
 install: all installh
 	-for i in ${ALL}; do \
