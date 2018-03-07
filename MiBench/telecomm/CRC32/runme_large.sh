@@ -1,2 +1,3 @@
 #!/bin/sh
-crc ../adpcm/data/large.pcm > output_large.txt
+source ../../env_run.sh
+$EXEC crc ../adpcm/data/large.pcm > output_large.txt
