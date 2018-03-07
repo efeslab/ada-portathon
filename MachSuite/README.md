@@ -12,11 +12,16 @@ We suggest running the benchmarks locally (from their own directory) for now.
 Also, our validation approach does is not portable across machines.
 For now, the final check to see if the output is correct is not performed.
 We are working on fixing it. However, this should not change the computation
-or behavior of the benchmarks at all.
+or behavior of the benchmarks at all.i
 
-## For RISC-V
-This repo is specific for riscv, we set `CC=$(riscvgcc)` in the top-level Makefile and change the `run` option to invoke
-QEMU. QEMU should be set by environmental variable `runqemu` and gcc with `riscvgcc`.
+Set the environment variables COMPILER and RUN_BINARY in the source file setup_riscv_env.sh
+for RISC-V and setup_native_env.sh for native enviroment
+
+## For RISC-V, run the command:
+	source setup_riscv_env.sh
+
+## For native environement, run the command: 
+	source setup_native_env.sh
 
 Compile for riscv by command:
 
