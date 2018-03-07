@@ -1,0 +1,2 @@
+FMM and Barnes appear to compile and run on smaller examples without issue. Larger examples hang though this is on a low-powered VM.
+The Radix kernel works on default settings.
