@@ -1,0 +1,9 @@
+Adding variable to set riscv emu
+
+x86:
+    make
+    make test
+
+riscv:
+    make CC=$riscvgcc
+    make RISCV_EMU="$runqemu"

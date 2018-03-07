@@ -21,6 +21,7 @@ mandir = $(prefix)/man/man$(manext)
 
 # The name of your C compiler:
 CC= gcc
+RISCV_EMU=
 
 # You may need to adjust these cc options:
 CFLAGS= -O  -I$(srcdir)
@@ -185,12 +186,12 @@ distribute:
 
 test: cjpeg djpeg jpegtran
 	$(RM) testout*
-	./djpeg -dct int -ppm -outfile testout.ppm  $(srcdir)/testorig.jpg
-	./djpeg -dct int -gif -outfile testout.gif  $(srcdir)/testorig.jpg
-	./cjpeg -dct int -outfile testout.jpg  $(srcdir)/testimg.ppm
-	./djpeg -dct int -ppm -outfile testoutp.ppm $(srcdir)/testprog.jpg
-	./cjpeg -dct int -progressive -opt -outfile testoutp.jpg $(srcdir)/testimg.ppm
-	./jpegtran -outfile testoutt.jpg $(srcdir)/testprog.jpg
+	$(RISCV_EMU) ./djpeg -dct int -ppm -outfile testout.ppm  $(srcdir)/testorig.jpg
+	$(RISCV_EMU) ./djpeg -dct int -gif -outfile testout.gif  $(srcdir)/testorig.jpg
+	$(RISCV_EMU) ./cjpeg -dct int -outfile testout.jpg  $(srcdir)/testimg.ppm
+	$(RISCV_EMU) ./djpeg -dct int -ppm -outfile testoutp.ppm $(srcdir)/testprog.jpg
+	$(RISCV_EMU) ./cjpeg -dct int -progressive -opt -outfile testoutp.jpg $(srcdir)/testimg.ppm
+	$(RISCV_EMU) ./jpegtran -outfile testoutt.jpg $(srcdir)/testprog.jpg
 	cmp $(srcdir)/testimg.ppm testout.ppm
 	cmp $(srcdir)/testimg.gif testout.gif
 	cmp $(srcdir)/testimg.jpg testout.jpg
