@@ -11,7 +11,7 @@ COMMON_SRC := $(wildcard $(CURDIR)/*.c)
 C_SRC := $(wildcard $(CURDIR)/includes/*.c)
 
 compile:
-	gcc -lm main.c common/*.c $(C_SRC) svd.c svd2.c sortSVDResult.c $(LDFLAGS)
+	$(CC) -lm main.c common/*.c $(C_SRC) svd.c svd2.c sortSVDResult.c $(LDFLAGS)
 
 run-all: run-small run-medium run-large
 
