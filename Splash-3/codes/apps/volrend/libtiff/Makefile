@@ -26,7 +26,6 @@
 #
 DESTDIR=/usr/local
 #
-AR=	/usr/bin/ar
 NULL=
 
 IPATH=	-I.
