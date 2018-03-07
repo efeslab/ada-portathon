@@ -1,6 +1,7 @@
 BINDIR='/usr/local/bin'
-CC='gcc'
-CFLAGS='-O2 -g'
+# CC='gcc'
+CC=${riscvgcc}
+CFLAGS='-O2 -g -std=c99'
 COUNTSUFFIX='.cnt'
 DEFHASH='english.hash'
 DEFLANG='english.aff'
