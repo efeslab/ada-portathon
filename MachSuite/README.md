@@ -12,7 +12,7 @@ We suggest running the benchmarks locally (from their own directory) for now.
 Also, our validation approach does is not portable across machines.
 For now, the final check to see if the output is correct is not performed.
 We are working on fixing it. However, this should not change the computation
-or behavior of the benchmarks at all.i
+or behavior of the benchmarks at all.
 
 # Setting up for RISC-V
 Ensure that environment variable "riscvgcc" points to your riscv compiler,
