@@ -1,9 +1,12 @@
 .SUFFIXES: .c .u
-CC= gcc
-CFLAGS  = 
+CC ?= gcc
+CFLAGS = 
 LDFLAGS = -lm
+riscv ?=
 
-
+ifneq ($(riscv),)
+	CFLAGS += -Driscv
+endif
 
 INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
 COMPILE_C = $(CC) $(CFLAGS) -O2 $(INCLUDES)
