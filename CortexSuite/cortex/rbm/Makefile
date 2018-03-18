@@ -1,10 +1,15 @@
-CC = gcc
 LDFLAGS = -lm
 
-INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
+ifneq ($(riscv),)
+        export CC=$(riscv)
+	export cc=$(riscv)
+	CFLAGS += -Driscv
+endif
+
+INCLUDES = -I../../includes -I$(CURDIR)
 COMPILE_C = $(CC) $(CFLAGS) -O2 $(INCLUDES)
 COMMON_SRC := $(wildcard $(CURDIR)/*.c)
-C_SRC := $(wildcard $(CURDIR)/includes/*.c)
+C_SRC := $(wildcard ../../includes/*.c)
 
 compile: small medium large
 
@@ -20,13 +25,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) -DUSERS=100 -DTEST_USERS=100 -DMOVIES=100 -DLOOPS=200 -o rbm-large $(LDFLAGS)
 
 run-small:
-	-./rbm-small | tee ../results/rbm.small
+	-$(submit) ./rbm-small | tee ../results/rbm.small
 
 run-medium:
-	-./rbm-medium  | tee ../results/rbm.medium
+	-$(submit) ./rbm-medium  | tee ../results/rbm.medium
 
 run-large:
-	-./rbm-large  | tee ../results/rbm.large
+	-$(submit) ./rbm-large  | tee ../results/rbm.large
 
 clean:
 	-rm rbm-small rbm-medium rbm-large out.txt

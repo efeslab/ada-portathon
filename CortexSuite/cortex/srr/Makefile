@@ -1,14 +1,17 @@
 .SUFFIXES: .c .u
-CC= gcc
 CFLAGS  = -O2
 LDFLAGS = -lm
 
+ifneq ($(riscv),)
+        export CC=$(riscv)
+	export cc=$(riscv)
+	CFLAGS += -Driscv
+endif
 
-
-INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
+INCLUDES = -I../../includes -I$(CURDIR)
 COMPILE_C = $(CC) $(CFLAGS) -O2 $(INCLUDES)
 COMMON_SRC := $(wildcard $(CURDIR)/*.c)
-C_SRC := $(wildcard $(CURDIR)/includes/*.c)
+C_SRC := $(wildcard ../../includes/*.c)
 SMALL = -DSYNTHETIC1
 MEDIUM = -DALPACA
 LARGE = -DBOOKCASE
@@ -27,13 +30,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) $(LARGE) $(CFLAGS) -o srr-large $(LDFLAGS)
 
 run-small:
-	-./srr-small 2>&1 | tee ../results/srr.small
+	-$(submit) ./srr-small 2>&1 | tee ../results/srr.small
 
 run-medium:
-	-./srr-medium 2>&1 | tee ../results/srr.medium
+	-$(submit) ./srr-medium 2>&1 | tee ../results/srr.medium
 
 run-large:
-	-./srr-large 2>&1 | tee ../results/srr.large
+	-$(submit) ./srr-large 2>&1 | tee ../results/srr.large
 
 clean:
 	-rm -f srr-small srr-medium srr-large

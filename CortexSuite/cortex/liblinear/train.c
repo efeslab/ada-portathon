@@ -8,7 +8,7 @@
 //#include "cycle_counter.h"
 #define Malloc(type,n) (type *)malloc((n)*sizeof(type))
 #define INF HUGE_VAL
-
+#include "timingUtils.h"
 
 #ifdef __cplusplus
 extern "C" {

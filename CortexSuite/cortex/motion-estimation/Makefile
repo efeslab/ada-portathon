@@ -1,17 +1,23 @@
 .SUFFIXES: .c .u
-CC= gcc
 CFLAGS  = -O2
 LDFLAGS = -lm
 
 
+ifneq ($(riscv),)
+        export CC=$(riscv)
+	export cc=$(riscv)
+	CFLAGS += -Driscv
+endif
 
-INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
+INCLUDES = -I../../includes -I$(CURDIR)
 COMPILE_C = $(CC) $(CFLAGS) -O2 $(INCLUDES)
 COMMON_SRC := $(wildcard $(CURDIR)/*.c)
-C_SRC := $(wildcard $(CURDIR)/includes/*.c)
+C_SRC := $(wildcard ../../includes/*.c)
 SMALL = -DSYNTHETIC1
 MEDIUM = -DALPACA
 LARGE = -DBOOKCASE
+
+
 
 compile: small medium large
 
@@ -28,13 +34,13 @@ large: $(C_SRC)
 	$(COMPILE_C) $(COMMON_SRC) $(C_SRC) $(LARGE) $(CFLAGS) -o me-large $(LDFLAGS)
 
 run-small:
-	-./me-small 2>&1 | tee ../results/me.small
+	-$(submit) ./me-small 2>&1 | tee ../results/me.small
 
 run-medium:
-	-./me-medium 2>&1 | tee ../results/me.medium
+	-$(submit) ./me-medium 2>&1 | tee ../results/me.medium
 
 run-large:
-	-./me-large 2>&1 | tee ../results/me.large
+	-$(submit) ./me-large 2>&1 | tee ../results/me.large
 
 clean:
 	-rm -f *.o me-small me-medium me-large
