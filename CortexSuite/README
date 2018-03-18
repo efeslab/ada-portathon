@@ -1,13 +1,14 @@
 UC San Diego
 CortexSuite
 
+These benchmarks have been modified so one has the option to cross-compile them for a
+RISC-V v1.10 Linux 4.15.0 target from an x86 host. 
 
-##Compile the benchmarks with the command [native mode]:
+Native mode:
+##Compile the benchmarks with the command:
 
 _make compile_
 
-This will compile the benchmarks for the small,medium,and large benchmarks
-where applicable. 
 
 To run a specific set of benchmarks use the commands
 
@@ -15,17 +16,29 @@ _make run-small_
 _make run-medium_
 _make run-large_
 
+This will compile the benchmarks for the small,medium,and large benchmarks
+where applicable. 
+
+RISC-V Cross-compilation:
+_make compile riscv=path/to/riscv/compiler/binary_
+
+E.g.,
+_make compile riscv=/home/ada/portathon/freedom-u-sdk/toolchain/bin/riscv64-unknown-linux-gnu-gcc_
+
+
+To run benchmarks in an environment (e.g., RISC-V emulator like spike or riscv QEMU)
+_make run-small submit="path/to/emulator/binary"_
+_make run-medium submit="path/to/emulator/binary"_
+_make run-large submit="path/to/emulator/binary"_
+
+E.g., running on RISC-V QEMU in usermode
+_make run-small submit="/home/ada/portathon/freedom-u-sdk/riscv-qemu/riscv64-linux-user/qemu-riscv64 -L /home/ada/portathon/freedom-u-sdk/toolchain/sysroot"_
+
+Remember to put the submit argument in quotes if it has any whitespace. 
+
 To gather the cycle counts for all of these algorithms run
 
 _make cycles_
 
 This will print the cycle count for small, medium, and large datasets if applicable
 for each algorithm
-
-##Compile the benchmarks with the command [cross-compilation mode]
-
-To cross-compile the benchmarks for RISC-V, run the make command with the following parameters:
-`CC=<path/to/riscvgcc cross-compiler> riscv=1`
-
-Example:
-To compile the "lda" benchmark: `make compile CC=$riscvgcc riscv=1`

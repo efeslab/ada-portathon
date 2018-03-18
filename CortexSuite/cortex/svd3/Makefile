@@ -1,28 +1,32 @@
 .SUFFIXES: .c .u
-CC= gcc
 CFLAGS  = 
 LDFLAGS = -lm
 
+ifneq ($(riscv),)
+        export CC=$(riscv)
+	export cc=$(riscv)
+	CFLAGS += -Driscv
+endif
 
-
-INCLUDES = -I$(CURDIR)/includes -I$(CURDIR)
+INCLUDES = -I$(CURDIR)/../../includes -I$(CURDIR)
 COMPILE_C = $(CC) $(CFLAGS) -O2 $(INCLUDES)
 COMMON_SRC := $(wildcard $(CURDIR)/*.c)
-C_SRC := $(wildcard $(CURDIR)/includes/*.c)
+C_SRC := $(wildcard ../../includes/*.c)
+
 
 compile:
-	gcc -lm main.c common/*.c $(C_SRC) svd.c svd2.c sortSVDResult.c $(LDFLAGS)
+	$(COMPILE_C) -lm main.c common/*.c $(C_SRC) svd.c svd2.c sortSVDResult.c $(LDFLAGS)
 
 run-all: run-small run-medium run-large
 
 run-small:
-	-./a.out small.txt 2>&1 | tee ../results/svd.small
+	-$(submit) ./a.out small.txt 2>&1 | tee ../results/svd.small
 
 run-medium:
-	-./a.out med.txt 2>&1 | tee ../results/svd.medium
+	-$(submit) ./a.out med.txt 2>&1 | tee ../results/svd.medium
 
 run-large:
-	-./a.out large.txt 2>&1 | tee ../results/svd.large
+	-$(submit) ./a.out large.txt 2>&1 | tee ../results/svd.large
 
 clean:
 	-rm a.out

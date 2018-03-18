@@ -6,7 +6,9 @@
 subdirs = lda liblinear motion-estimation pca rbm sphinx srr svd3
 
 ifneq ($(riscv),)
-        CFLAGS += -Driscv
+        export CC=$(riscv)
+	export cc=$(riscv)
+	CFLAGS += -Driscv
 endif
 
 vision:
@@ -16,21 +18,21 @@ run-all: run-small run-medium run-large
 
 compile:
 	for dir in $(subdirs); do\
-		$(MAKE) -C cortex/$$dir compile;\
+		$(MAKE) -C cortex/$$dir compile riscv=$(riscv);\
 		done
 	
 run-small:
 	for dir in $(subdirs); do\
-		$(MAKE) -C cortex/$$dir run-small;\
+		$(MAKE) -C cortex/$$dir run-small submit="$(submit)";\
 		done
 run-medium:
 	for dir in $(subdirs); do\
-		$(MAKE) -C cortex/$$dir run-medium;\
+		$(MAKE) -C cortex/$$dir run-medium submit="$(submit)";\
 		done
 	
 run-large:
 	for dir in $(subdirs); do\
-		$(MAKE) -C cortex/$$dir run-large;\
+		$(MAKE) -C cortex/$$dir run-large submit="$(submit)";\
 		done
 
 cycles:
