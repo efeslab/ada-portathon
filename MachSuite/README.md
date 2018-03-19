@@ -31,7 +31,7 @@ If you use the code, we would appreciate it if you cite the following paper:
 
 For any questions/concerns, please email [reagen@fas.harvard.edu](reagen@fas.harvard.edu)
 
-##Building
+## Building and Running
 
 Native:
 
