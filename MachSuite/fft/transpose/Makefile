@@ -1,5 +1,3 @@
-include ../../Makefile.variables
-
 KERN=fft
 ALG=transpose
 
@@ -9,13 +7,13 @@ SRCS=$(KERN).c local_support.c ../../common/support.c
 FILES=$(SRCS) $(KERN).h ../../common/support.h
 
 $(KERN): $(FILES) ../../common/harness.c
-	$(compiler) $(CFLAGS) -I../../common -o $(KERN) $(SRCS) ../../common/harness.c -lm
+	$(CC) $(CFLAGS) -I../../common -o $(KERN) $(SRCS) ../../common/harness.c -lm
 
 run: $(KERN) input.data check.data
-	./$(KERN) input.data check.data
+	$(submit) ./$(KERN) input.data check.data
 
 generate: $(FILES) generate.c
-	$(compiler) $(CFLAGS) -I../../common -o generate $(SRCS) generate.c -lm
+	$(CC) $(CFLAGS) -I../../common -o generate $(SRCS) generate.c -lm
 
 hls: $(KERN).c $(KERN).h
 	vivado_hls hls.tcl
