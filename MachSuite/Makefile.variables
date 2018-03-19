@@ -1,3 +1,0 @@
-# comment out the version you do NOT want
-#compiler=$(CC)
-compiler=$(riscvgcc)
