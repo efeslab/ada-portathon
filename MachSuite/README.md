@@ -32,22 +32,32 @@ If you use the code, we would appreciate it if you cite the following paper:
 For any questions/concerns, please email [reagen@fas.harvard.edu](reagen@fas.harvard.edu)
 
 ##Building
+
 Native:
+
 To build the benchmarks natively, type
+
 _make build_
 
 To run natively, type
+
 _make run_
 
 RISC-V:
 To build with a RISC-V compiler, type:
+
 _make build CC=path/to/riscv/compiler/binary_
+
 E.g.,
+
 _make build CC=/home/ada/portathon/freedom-u-sdk/toolchain/bin/riscv64-unknown-linux-gnu-gcc_
 
 To run on a risc-v emulator, type:
+
 _make run CC=path/to/riscv/compiler/binary submit="path/to/emulator/binary"_
+
 E.g., running on RISC-V QEMU in usermode
+
 _make run CC=path/to/riscv/compiler/binary submit="/home/ada/portathon/freedom-u-sdk/riscv-qemu/riscv64-linux-user/qemu-riscv64 -L /home/ada/portathon/freedom-u-sdk/toolchain/sysroot"_
 
 If there is whitespace in the submit argument, remember to put the argument in double quotes.
