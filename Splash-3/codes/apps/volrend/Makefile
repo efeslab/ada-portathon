@@ -3,6 +3,9 @@ OBJS = adaptive.o file.o main.o map.o normal.o octree.o opacity.o option.o raytr
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) $(threads) inputs/head 8
+
 CFLAGS := $(CFLAGS) -I./libtiff
 LDFLAGS := -L./libtiff $(LDFLAGS) -ltiff
 

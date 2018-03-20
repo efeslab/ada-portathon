@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-riscvar=$(HOME)/portathon/freedom-u-sdk/toolchain/bin/riscv64-unknown-linux-gnu-ar
+
 
 all:
 	$(MAKE) -C apps/barnes
@@ -18,21 +18,21 @@ all:
 	$(MAKE) -C kernels/lu/non_contiguous_blocks
 	$(MAKE) -C kernels/radix
 
-riscv:
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/barnes
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/fmm
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/ocean/contiguous_partitions
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/ocean/non_contiguous_partitions
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/radiosity
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/raytrace
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/volrend
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/water-nsquared
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C apps/water-spatial
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C kernels/cholesky
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C kernels/fft
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C kernels/lu/contiguous_blocks
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C kernels/lu/non_contiguous_blocks
-	$(MAKE) AR=$(riscvar) CC=$(riscvgcc) -C kernels/radix
+run:
+	$(MAKE) -C apps/barnes run 
+	$(MAKE) -C apps/fmm run
+	$(MAKE) -C apps/ocean/contiguous_partitions run
+	$(MAKE) -C apps/ocean/non_contiguous_partitions run
+	$(MAKE) -C apps/radiosity run
+	$(MAKE) -C apps/raytrace run
+	$(MAKE) -C apps/volrend run
+	$(MAKE) -C apps/water-nsquared run
+	$(MAKE) -C apps/water-spatial run
+	$(MAKE) -C kernels/cholesky run
+	$(MAKE) -C kernels/fft run
+	$(MAKE) -C kernels/lu/contiguous_blocks run
+	$(MAKE) -C kernels/lu/non_contiguous_blocks run
+	$(MAKE) -C kernels/radix run
 
 clean:
 	$(MAKE) -C apps/barnes clean

@@ -6,6 +6,9 @@ HS = model.h parallel.h patch.h radiosity.h task.h structs.h
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) -p $(threads) -ae 5000 -bf 0.1 -en 0.05 -room -batch
+
 CFLAGS := $(CFLAGS) -I./glibdumb -I./glibps
 
 #CCOPTS = -I -float -I/usr/include $(CFLAGS)

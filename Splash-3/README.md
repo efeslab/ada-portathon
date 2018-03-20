@@ -1,6 +1,36 @@
 Splash-3 Benchmark Suite
 ========================
 
+These benchmarks have been modified so one has the option to cross-compile them for a
+RISC-V (v1.10) Linux (4.15.0) target from an x86 host. 
+
+Changes:
+We mainly added options to specify a cross compiler at the command line. We also added
+an option to run all the benchmarks with the default simulation settings and input sizes,
+with an option to specify the number of threads. 
+
+Native: 
+
+compile with:
+
+_make_
+
+run with:
+
+_make run threads=[#threads]_
+
+To cross-compile:
+
+_make CC=path/to/riscv/compiler/binary AR=path/to/GNU/AR/binary_
+
+To run in a simulator:
+
+_make run threads=[#threads] submit="path/to/simulator/binary"_
+
+All arguments can be set to a default in Splash-3/codes/Makefile.config
+
+--------------------------------------------------------------------------------------
+
 Splash-3 is a benchmark suite based on Splash-2 but without data races. It was
 first presented at [ISPASS'16](http://ieeexplore.ieee.org/abstract/document/7482078/).
 
@@ -75,6 +105,7 @@ based on the original Splash-2 characterization paper by Woo et al. [1].
 	kernels/lu/contiguous_blocks/LU -p# -n512
 	kernels/lu/non_contiguous_blocks/LU -p# -n512
 	kernels/radix/RADIX -p# -n1048576
+
 
 ## Known Issues
 

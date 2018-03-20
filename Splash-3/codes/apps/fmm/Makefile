@@ -3,6 +3,9 @@ OBJS = box.o construct_grid.o cost_zones.o defs.o fmm.o interactions.o memory.o 
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) < inputs/input.$(threads).16384
+
 defs.c: defs.h
 box.c: box.h
 construct_grid.c: construct_grid.h
