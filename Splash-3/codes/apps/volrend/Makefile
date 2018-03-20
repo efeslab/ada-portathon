@@ -3,6 +3,9 @@ OBJS = adaptive.o file.o main.o map.o normal.o octree.o opacity.o option.o raytr
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) $(threads) inputs/head 8
+
 CFLAGS := $(CFLAGS) -I./libtiff
 LDFLAGS := -L./libtiff $(LDFLAGS) -ltiff
 
@@ -21,4 +24,8 @@ raytrace.c: raytrace.c.in incl.h address.h
 incl.h:	user_options.h const.h my_types.h global.h macros.h address.h
 
 libtiff/libtiff.a:
-	make -C libtiff
+	$(MAKE) -C libtiff all
+
+clean:
+	$(MAKE) -C libtiff clean
+	rm -rf *.c *.o *.h $(TARGET)

@@ -3,6 +3,9 @@ OBJS = jacobcalc.o jacobcalc2.o laplacalc.o linkup.o main.o multi.o slave1.o sla
 
 include ../../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) -p$(threads) -n258
+
 decs.h: decs.h.in
 jacobcalc.c: decs.h
 linkup.c: decs.h

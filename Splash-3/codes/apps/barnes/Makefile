@@ -3,6 +3,9 @@ OBJS = code.o code_io.o load.o grav.o getparam.o util.o
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) < inputs/n16384-p$(threads)
+
 stdinc.h: code.h defs.h util.h vectmath.h load.h code_io.h grav.h getparam.h stdinc.h.in
 code.o: code.c.in stdinc.h
 code_io.o: code_io.c.in stdinc.h

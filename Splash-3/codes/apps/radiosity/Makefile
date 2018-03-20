@@ -6,6 +6,9 @@ HS = model.h parallel.h patch.h radiosity.h task.h structs.h
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) -p $(threads) -ae 5000 -bf 0.1 -en 0.05 -room -batch
+
 CFLAGS := $(CFLAGS) -I./glibdumb -I./glibps
 
 #CCOPTS = -I -float -I/usr/include $(CFLAGS)
@@ -35,3 +38,8 @@ glibdumb/glib.a:
 
 glibps/glibps.a:
 	$(MAKE) -C glibps
+
+clean:
+	rm -rf *.c *.h *.o $(TARGET)
+	$(MAKE) -C glibdumb clean
+	$(MAKE) -C glibps clean

@@ -6,6 +6,9 @@ OBJS = bbox.o cr.o env.o fbuf.o geo.o huprn.o husetup.o hutv.o isect.o \
 
 include ../../Makefile.config
 
+run:
+	$(submit) ./$(TARGET) -p$(threads) -m64 inputs/car.env
+
 bbox.c: bbox.c.in rt.h
 cr.c:	cr.c.in rt.h
 env.c:	env.c.in rt.h
