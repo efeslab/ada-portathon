@@ -1,0 +1,46 @@
+CC ?= gcc
+submit ?= 
+OPTLVL = -O3
+
+#FLAGS = -DBARE_METAL -Wall $(PTLVL) -target $(TOOLCHAIN) -mcpu=$(CHIP) -mthumb --specs=nosys.specs -nostartfiles -ffreestanding -std=c99 -fomit-frame-pointer -fno-optimize-sibling-calls #-static
+FLAGS = -Wall $(OPTLVL) -ffreestanding -std=c99 -fomit-frame-pointer -fno-optimize-sibling-calls -lm -lc
+#LIBS = --start-group -lm -lc -lbuiltins --end-group
+LIBS =  -lc -lm
+
+LINKDIR= -L/home/luwa/freedom-u-sdk/toolchain/lib 
+INCLIB = -I/home/luwa/freedom-u-sdk/toolchain/include 
+
+subdirs= adpcm_decode dijkstra bitcount fft stringsearch aes blowfish patricia basicmath susan rsa sha adpcm_encode crc qsort
+
+.PHONY: compile run-all
+
+compile:
+	for dir in $(subdirs); do\
+		$(MAKE) -C $$dir riscv=$(riscv);\
+		done
+
+
+
+#run-all:
+#	@( for b in $(BENCHMARKS); do $(MAKE) run -C $$b; done )
+
+%.o: %.s
+	$(CC) $(FLAGS) $(INCLIB) -c -o $@ $<
+
+%.o: ../%.s
+	$(CC) $(FLAGS) $(INCLIB) -c -o $@ $<
+
+%.o: %.c
+	$(CC) ${FLAGS} $(INCLIB) -c -o $@ $< 
+
+%.o: ../%.c
+	$(CC) ${FLAGS} $(INCLIB) -c -o $@ $< 
+
+$(TARGET): $(OBJS) 
+	$(CC) $(FLAGS) $(OBJS) -o $(TARGET) $(LIBS)
+
+#run:
+#	$(submit) ./$(TARGET)
+
+clean: more_clean
+	rm -rf $(TARGET) *.o *.elf output* *.lst *.bin *~

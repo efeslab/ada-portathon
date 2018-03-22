@@ -1,4 +1,5 @@
 PREFIX=${PARSECDIR}/pkgs/apps/blackscholes/inst/${PARSECPLAT}
+include ../../../../config/Makefile.variables
 
 ifdef source
 	ifeq "$(source)" "simd" 
@@ -62,7 +63,7 @@ CXXFLAGS += $(MT) $(SZ) $(NCO) $(FUNC) $(ERR) $(CSRC)
 all: $(TARGET)
 
 $(TARGET): clean $(CSRC)
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(LIBS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(LIBS) -o $(TARGET) -lm
 
 $(M4_SRC): $(SRC)
 	$(M4) $(M4_BASE)/$(MACROS) $< > $@
