@@ -48,25 +48,6 @@ System Requirements:
  3) sed: version 4.0.9 or higher recommended.
 At least 200 MBytes memory is needed for the benchmark.
 =======================================
-# Setting up for RISC-V
-Ensure that environment variable "riscvgcc" points to your riscv compiler,
-and that environment variable "runqemu" points to your QEMU usermode binary
-with the appropriate arugments. Then, run the command:
-	source setup_riscv_env.sh
-
-# Setting up for native environement
-Run the command: 
-	source setup_native_env.sh
-
-# Compilation and running the suite
-To compile the benchmarks, run:
-
-	make
-
-To run your binaries:
-
-	make run
-=======================================
 Input/Output:
 
 The dataset of the benchmark contains the data of a collection of Newtonian
