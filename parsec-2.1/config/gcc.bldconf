@@ -50,9 +50,15 @@ case "${OSTYPE}" in
 esac
 
 # Compilers and preprocessors
-export CC="${CC_HOME}/bin/gcc"
-export CXX="${CC_HOME}/bin/g++"
-export CPP="${CC_HOME}/bin/cpp"
+# export CC="${CC_HOME}/bin/gcc"
+# export CXX="${CC_HOME}/bin/g++"
+# export CPP="${CC_HOME}/bin/cpp"
+# export CXXCPP=""
+
+# Compilers and preprocessors
+export CC=$riscvgcc #"${CC_HOME}/bin/gcc"
+export CXX=$riscvgpp #/usr/bin/g++ #"${CC_HOME}/bin/g++"
+export CPP=$riscvCPP #"${CC_HOME}/bin/cpp"
 export CXXCPP=""
 
 # GNU Binutils
