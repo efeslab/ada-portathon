@@ -1,6 +1,6 @@
 # Makefile for streamcluster
 PREFIX=${PARSECDIR}/pkgs/kernels/streamcluster/inst/${PARSECPLAT}
-#include ../../../../config/Makefile.variables
+
 
 TARGET=streamcluster
 OBJS=streamcluster.o

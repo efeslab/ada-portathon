@@ -1,11 +1,5 @@
 PREFIX=${PARSECDIR}/pkgs/apps/blackscholes/inst/${PARSECPLAT}
-#include ../../../../config/Makefile.variables
 
-compiler=$(CXX)
-#compiler=$(riscvgcc)
-
-#CC=$riscvgcc
-#version=pthreads
 ifdef source
 	ifeq "$(source)" "simd" 
 		SRC = blackscholes.simd.c
@@ -63,12 +57,12 @@ ifdef double
 NCO = -DNCO=2
 endif
 
-CXXFLAGS += $(MT) $(SZ) $(NCO) $(FUNC) $(ERR) $(CSRC) -pthread
+CXXFLAGS += $(MT) $(SZ) $(NCO) $(FUNC) $(ERR) $(CSRC)
 
 all: $(TARGET)
 
 $(TARGET): clean $(CSRC)
-	$(compiler) $(CXXFLAGS) $(LDFLAGS) $(LIBS) -o $(TARGET) -lm -lpthread
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(LIBS) -o $(TARGET) -lm
 
 $(M4_SRC): $(SRC)
 	$(M4) $(M4_BASE)/$(MACROS) $< > $@

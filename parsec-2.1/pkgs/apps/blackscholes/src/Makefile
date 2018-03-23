@@ -1,5 +1,4 @@
 PREFIX=${PARSECDIR}/pkgs/apps/blackscholes/inst/${PARSECPLAT}
-include ../../../../config/Makefile.variables
 
 ifdef source
 	ifeq "$(source)" "simd" 

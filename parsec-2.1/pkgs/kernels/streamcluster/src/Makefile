@@ -1,6 +1,6 @@
 # Makefile for streamcluster
 PREFIX=${PARSECDIR}/pkgs/kernels/streamcluster/inst/${PARSECPLAT}
-include ../../../../config/Makefile.variables
+
 
 TARGET=streamcluster
 OBJS=streamcluster.o
@@ -16,10 +16,10 @@ ifdef version
 endif
 
 all: $(OBJS)
-	$(compiler) $(CXXFLAGS) $(LDFLAGS) $(OBJS) $(LIBS) -o $(TARGET) -lstdc++ -lm
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) $(LIBS) -o $(TARGET) -lstdc++ -lm
 
 %.o : %.cpp
-	$(compiler) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $<
 
 clean:
 	rm -f *.o $(TARGET)
