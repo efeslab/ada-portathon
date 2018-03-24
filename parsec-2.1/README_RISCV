@@ -1,0 +1,27 @@
+This is an ongoing project to port parsec to RISC-V. 
+So far we have Blackscholes, Fluidanimate, Freqmine, Streamcluster, and Swaptions working.
+
+Note: This README is intended to supplement the README in this folder and not replace it. 
+
+## Building
+
+Building works as normal with the original Parsec 2.1 suite. Set your cross-compiler
+in the config/gcc.bldconf file. You need set variables with full paths to binaries, e.g., set
+CXX for g++ binary path, CC for gcc binary path, etc.
+
+Then, to build, go to the bin folder and, on the command line, enter:
+
+_./parsecmgmt -a build -p [benchmark_name]_
+
+
+## Running
+
+To run, go to the bin folder, enter:
+
+_./parsecmgmt -a run -p [benchmark_name] -s [run_environment] -i [input size] -n [num_threads]_
+
+For run environment, we tested with RISC-V QEMU emulator using usermode.
+
+Between builds for different platforms, you must uninstall the previous build.
+
+_./parsecmgmt -a uninstall -p [benchmark_name]_
