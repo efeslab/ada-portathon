@@ -6,8 +6,8 @@ RISC-V (v1.10) Linux (4.15.0) target from an x86 host.
 
 Changes:
 We mainly added options to specify a cross compiler at the command line. We also added
-an option to run all the benchmarks with the default simulation settings and input sizes,
-with an option to specify the number of threads. 
+an option to run all the benchmarks with the default simulation settings and input sizes
+(from Woo et al., see below), with an option to specify the number of threads. 
 
 Native: 
 

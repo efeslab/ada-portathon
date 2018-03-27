@@ -1,8 +1,8 @@
 UC San Diego
 CortexSuite
 
-These benchmarks have been modified so one has the option to cross-compile them for a
-RISC-V v1.10 Linux 4.15.0 target from an x86 host. 
+These benchmarks have been modified to provide the option to cross-compile them for a
+RISC-V (v1.10) Linux (4.15.0) target from an x86 host. 
 
 Native mode:
 ##Compile the benchmarks with the command:

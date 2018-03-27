@@ -2,8 +2,8 @@
 
 MachSuite is a benchmark suite intended for accelerator-centric research.
 
-These benchmarks have been modified so one has the option to cross-compile them for a
-RISC-V v1.10 Linux 4.15.0 target from an x86 host.
+These benchmarks have been modified to provide the option to cross-compile them for a
+RISC-V (v1.10) Linux (4.15.0) target from an x86 host.
 
 There is a Makefile in the top direcrory as well as one within each benchmark
 subdirectory.
