@@ -56,10 +56,10 @@ export CPP="${CC_HOME}/bin/cpp"
 export CXXCPP=""
 
 # Compilers and preprocessors
-# export CC=$riscvgcc 
-# export CXX=$riscvgpp
-# export CPP=$riscvCPP
-# export CXXCPP=""
+export CC=$riscvgcc 
+export CXX=$riscvgpp
+export CPP=$riscvCPP
+export CXXCPP=""
 
 # GNU Binutils
 export LD="${BINUTIL_HOME}/bin/${BINARY_PREFIX}ld"

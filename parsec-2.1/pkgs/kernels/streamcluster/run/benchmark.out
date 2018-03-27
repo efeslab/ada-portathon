@@ -1,5 +1,2 @@
-./parsecmgmt: line 936: /home/luwa/benchmarks/parsec-2.1/bin/../pkgs/kernels/streamcluster/inst/amd64-linux.gcc/bin/streamcluster: cannot execute binary file: Exec format error
-
-real	0m0.002s
-user	0m0.000s
-sys	0m0.000s
+PARSEC Benchmark Suite Version 2.1
+read 10 points
