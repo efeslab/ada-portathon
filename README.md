@@ -22,7 +22,7 @@ of mutually-compatible RISC-V tools all in one location.
 
 ## Building and Running
 
-Each sub-directory contains instructions (in the README) for building and running the benchmarks in a RISC-V environment.
+Each sub-directory contains instructions (in the README) for building and running the benchmarks.
 All the benchmarks ported have options to be compiled natively or cross-compiled for RISC-V.
 We have set up CortexSuite, MachSuite, MiBench2, SPLASH-3 such that all their benchmarks can be built, run, and cleaned from
 their top directories. 
