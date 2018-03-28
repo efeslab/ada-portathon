@@ -42,3 +42,15 @@ _make cycles_
 
 This will print the cycle count for small, medium, and large datasets if applicable
 for each algorithm
+
+Note:
+
+Due to Github's 200MB file size limitation, we have excluded the following files:
+
+CortexSuite/cortex/liblinear/data/100B/kdda
+CortexSuite/cortex/liblinear/data/10B/epsilon
+CortexSuite/cortex/sphinx/language_model/HUB4/model.DMP
+
+The simple implication is that you may not be able to run those benchmarks with larger input sizes.
+To remedy this, simply copy those benchmarks to your local machine from the original CortexSuite repository
+(https://bitbucket.org/taylor-bsg/cortexsuite). 
