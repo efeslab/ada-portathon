@@ -7,7 +7,7 @@ on agile application-driven system design, which is a focus of the
 The suite currently contains a RISC-V port of popular computer hardware and systems
 benchmark suites, including all of CortexSuite, MachSuite, MiBench2, SPLASH-3, and several
 PARSEC 2.1 benchmarks (Blackscholes, Fluidanimate, Freqmine, Streamcluster, and Swaptions).
-In addition to completing the PARSEC ports, ADASuite hopes to expand to include more benchmarks
+In addition to completing the PARSEC ports, we hope to expand the ADASuite to include more benchmarks
 in visual computing, natural language processing, virtual/augmented reality, and graph processing.
 
 ## RISC-V Tools Used
@@ -26,4 +26,3 @@ Each sub-directory contains instructions (in the README) for building and runnin
 All the benchmarks ported have options to be compiled natively or cross-compiled for RISC-V.
 We have set up CortexSuite, MachSuite, MiBench2, SPLASH-3 such that all their benchmarks can be built, run, and cleaned from
 their top directories. 
-
