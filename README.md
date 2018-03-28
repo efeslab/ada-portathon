@@ -2,7 +2,7 @@
 
 ADASuite is a heterogeneous benchmark suite intended to evaluate research
 on agile application-driven system design, which is a focus of the
-[Center for Applications Driving Architectures] (http://adacenter.org/) (ADA).
+[Center for Applications Driving Architectures](http://adacenter.org/) (ADA).
 
 The suite currently contains a RISC-V port of popular computer hardware and systems
 benchmark suites, including all of CortexSuite, MachSuite, MiBench2, SPLASH-3, and several
@@ -16,7 +16,7 @@ To cross-compile the benchmarks, we used RISC-V GCC 7.2.0, which targets RISC-V 
 (rv64imafdc default) in a Linux environment (kernel  4.15.0). To test the binaries in the target environment,
 we relied on emulation using RISC-V QEMU usermode.
 
-We found SiFive's [Freedom SDK] (https://github.com/sifive/freedom-u-sdk) a useful repository
+We found SiFive's [Freedom SDK](https://github.com/sifive/freedom-u-sdk) a useful repository
 of mutually-compatible RISC-V tools all in one location. 
 
 
