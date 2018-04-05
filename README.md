@@ -10,6 +10,9 @@ PARSEC 2.1 benchmarks (Blackscholes, Fluidanimate, Freqmine, Streamcluster, and 
 In addition to completing the PARSEC ports, we hope to expand the ADASuite to include more benchmarks
 in visual computing, natural language processing, virtual/augmented reality, and graph processing.
 
+These ports were facilitated thanks to an ADA Center student hackathon. See the "README_portathon" file
+for more information.
+
 ## RISC-V Tools Used
 
 To cross-compile the benchmarks, we used RISC-V GCC 7.2.0, which targets RISC-V privileged architecture RISC-V v1.10
@@ -26,3 +29,7 @@ Each sub-directory contains instructions (in the README) for building and runnin
 All the benchmarks ported have options to be compiled natively or cross-compiled for RISC-V.
 We have set up CortexSuite, MachSuite, MiBench2, SPLASH-3 such that all their benchmarks can be built, run, and cleaned from
 their top directories. 
+
+## Contact
+
+For any questions, you may contact Opeoluwa Matthews at luwa@umich.edu 
