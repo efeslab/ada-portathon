@@ -30,6 +30,3 @@ All the benchmarks ported have options to be compiled natively or cross-compiled
 We have set up CortexSuite, MachSuite, MiBench2, SPLASH-3 such that all their benchmarks can be built, run, and cleaned from
 their top directories. 
 
-## Contact
-
-For any questions, you may contact Opeoluwa Matthews at luwa@umich.edu 
