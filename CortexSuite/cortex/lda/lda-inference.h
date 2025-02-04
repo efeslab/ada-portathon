@@ -7,8 +7,8 @@
 #include "lda.h"
 #include "utils.h"
 
-float VAR_CONVERGED;
-int VAR_MAX_ITER;
+extern float VAR_CONVERGED;
+extern int VAR_MAX_ITER;
 
 double lda_inference(document*, lda_model*, double*, double**);
 double compute_likelihood(document*, lda_model*, double**, double*);
