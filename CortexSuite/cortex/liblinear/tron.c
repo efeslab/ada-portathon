@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include "tron.h"
 #include "linear.h"
+#include "photonTiming.h"
 
 #ifndef mindouble
 static double mindouble(double x,double y) { return (x<y)?x:y; }

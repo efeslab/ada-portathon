@@ -2,6 +2,7 @@
 #include "BmpHandler.h"
 #include "SystemMatrices.h"
 #include "SRREngine.h"
+#include "photonTiming.h"
 #include <string.h>
 
 

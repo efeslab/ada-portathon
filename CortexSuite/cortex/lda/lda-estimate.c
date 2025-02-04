@@ -18,6 +18,7 @@
 // USA
 
 #include "lda-estimate.h"
+#include "photonTiming.h"
 
 /*
  * perform inference on a document and update sufficient statistics

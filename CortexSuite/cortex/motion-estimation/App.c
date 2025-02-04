@@ -1,6 +1,7 @@
 //#include <BmpHandler.h>
 #include "MotionEstimation.h"
 #include "BmpHandler.h"
+#include "photonTiming.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,6 +1,7 @@
 #define MAX_LENGTH 1024
 
 #include "helper/pocketsphinx.h"
+#include "../../includes/photonTiming.h"
 
 int
 main(int argc, char *argv[])
